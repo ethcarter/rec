@@ -4,8 +4,8 @@
 
 ### Experiments
 
-- [**Experiment 01**](cpp/exp1.md)
-- [**Experiment 02**](cpp/exp2.md)
-- [**Experiment 03**](cpp/exp3.md)
-- [**Experiment 04**](cpp/exp4.md)
-- [**Experiment 05**](cpp/exp5.md)
+- [**Experiment 01**](experiment_01.md)
+- [**Experiment 02**](experiment_02.md)
+- [**Experiment 03**](experiment_03.md)
+- [**Experiment 04**](experiment_04.md)
+- [**Experiment 05**](experiment_05.md)
