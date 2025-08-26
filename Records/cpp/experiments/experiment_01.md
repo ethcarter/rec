@@ -1,0 +1,64 @@
+<h4 align=center><b>C++ | EXPERIMENT 01</b></h4>>
+
+### Familiarization with C++ programming environment (Editor, Compiler, etc.)
+
+---
+
+#### **Aim of the experiment:**
+> To understand and familiarize with the C++ programming environment, including the use of an editor, compiler, and execution process.
+
+---
+
+#### **Theory:**
+> **C++ programs** are written in an editor and converted into machine code using a compiler. The workflow involves editing, compiling, and executing to observe results.
+
+> **Key Points:**
+> - **Editor:** write and save source code (`.cpp`).  
+> - **Compiler:** translates code into executable form.  
+> - **Steps:** Preprocessing → Compilation → Linking → Execution.  
+
+---
+
+#### **Compilation Workflow:**
+```mermaid
+flowchart LR
+    A[Source Code (.cpp)] --> B[Preprocessor]
+    B --> C[Compiler]
+    C --> D[Assembler]
+    D --> E[Linker]
+    E --> F[Executable (.exe / .out)]
+    F --> G[Execution / Output]
+```
+
+---
+
+#### **Algorithm(optional):**
+> 1. Open an editor and write a simple C++ program.  
+> 2. Save the file with a `.cpp` extension.  
+> 3. Compile the program using a C++ compiler (e.g., `g++`).  
+> 4. Fix any errors if present.  
+> 5. Run the generated executable to view the output.  
+
+
+#### **Program:**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello World"<< endl;
+    return 0;
+}
+```
+
+---
+
+#### **Sample Output:**
+```cpp
+Hello World
+```
+
+---
+
+#### **Conclusion:**
+> Successfully familiarized with the C++ environment by writing, compiling, and executing a simple program.
