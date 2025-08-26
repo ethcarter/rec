@@ -3,9 +3,10 @@
 <br>
 <div align=center>
 
-[![C++](https://img.shields.io/badge/C++-37a779?style=for-the-badge)](record/cpp/README.md)
+[![C++](https://img.shields.io/badge/cpp-37a779?style=for-the-badge)](record/cpp/README.md) | [![DSA](https://img.shields.io/badge/dsa-37a779?style=for-the-badge)](record/dsa/README.md) | [![DE](https://img.shields.io/badge/de-37a779?style=for-the-badge)](record/de/README.md)
 
-[![DSA](https://img.shields.io/badge/Data%20Structure%20&%20Algorithm-37a779?style=for-the-badge)](record/dsa/README.md)
+[![IST](https://img.shields.io/badge/ist-37a779?style=for-the-badge)](record/ist/README.md) |
+[![IOT](https://img.shields.io/badge/iot-37a779?style=for-the-badge)](record/iot/README.md)
 
 </div>
 
