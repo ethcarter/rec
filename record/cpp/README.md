@@ -1,10 +1,15 @@
 <div align=center>
-  <h2>**C++ Practicals**</h2>
+  <br>
+  <h3>C++ Practicals</h3>
+  <br>
 </div>
+<br>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
+<br>
 <div align=center>
+<br>
 
 [![Experiment 01]( https://img.shields.io/badge/Experiment%2001-468A9A?style=for-the-badge&logoColor=white&logo=Files)](experiments/_01.md)
 
@@ -16,4 +21,5 @@
 
 [![Experiment 05]( https://img.shields.io/badge/Experiment%2005-468A9A?style=for-the-badge&logoColor=white&logo=Files)](experiments/_05.md)
 
+<br>
 </div>
