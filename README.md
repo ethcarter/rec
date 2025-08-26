@@ -5,12 +5,12 @@
 
 <div align=center>
 
-[C++](cpp/README.md)
-[DSA](dsa/README.md)
+[**C++**](cpp/README.md)
+[**DSA**](dsa/README.md)
 
 </div>
 
 ---
 
 ## 📃 License
-<p>This project is licensed under [ARR-2025](License.md)
+This project is licensed under [**ARR-2025**](License.md)
