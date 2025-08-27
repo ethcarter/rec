@@ -3,9 +3,15 @@
 <br>
 <div align=center>
 
-[![C++](https://img.shields.io/badge/cpp-37a779?style=for-the-badge)](record/cpp/README.md)  [![DSA](https://img.shields.io/badge/dsa-37a779?style=for-the-badge)](record/dsa/README.md)  [![DE](https://img.shields.io/badge/de-37a779?style=for-the-badge)](record/de/README.md)
+[![C++](https://img.shields.io/badge/C%2B%2B_PROGRAMMING-37a779?logo=cplusplus&logoColor=fff&style=flat-square)](record/cpp/README.md)
 
-[![IST](https://img.shields.io/badge/ist-37a779?style=for-the-badge)](record/ist/README.md)  [![IOT](https://img.shields.io/badge/iot-37a779?style=for-the-badge)](record/iot/README.md)
+[![DSA](https://img.shields.io/badge/DATA_STRUCTURE_&_ALGORITHM-37a779?logo=bookstack&logoColor=fff&style=flat-square)](record/dsa/README.md)
+
+[![DE](https://img.shields.io/badge/DIGITAL_ELECTRONICS-37a779?logo=circuitverse&logoColor=fff&style=flat-square)](record/de/README.md)
+
+[![IST](https://img.shields.io/badge/SENSOR_TECHNOLOGY-37a779?logo=semantic-release&logoColor=fff&style=flat-square)](record/ist/README.md)
+
+[![IOT](https://img.shields.io/badge/INTERNET_OF_THINGS-37a779?logo=internetcomputer&logoColor=fff&style=flat-square)](record/iot/README.md)
 
 </div>
 
