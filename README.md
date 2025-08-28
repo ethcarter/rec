@@ -23,6 +23,6 @@
 
 <div align=center>
 
-[![Unlicense](https://img.shields.io/badge/ARR_2025-By_dorukaysor-%23000000.svg?style=for-the-badge&logo=Contentstack&logoColor=FF7139)](LICENSE)
+[![Unlicense](https://img.shields.io/badge/ARR--2025-%23000000.svg?style=for-the-badge&logo=Contentstack&logoColor=FF7139)](LICENSE)
 
 </div>
