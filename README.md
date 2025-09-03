@@ -4,7 +4,7 @@
 <br>
 <div align=center>
 
-[![C++](https://img.shields.io/badge/C++_PROGRAMMING-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](record/cpp/README.md")
+[![C++](https://img.shields.io/badge/C++_PROGRAMMING-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](record/cpp/README.md)
 
 [![DSA](https://img.shields.io/badge/DATA_STRUCTURE_&_ALGORITHM-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](record/dsa/README.md)
 
