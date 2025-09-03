@@ -4,12 +4,11 @@
 <br>
 <div align=center>
 
-<img src="https://img.shields.io/badge/C++_PROGRAMMING-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139" href="record/cpp/README.md">
-<br>
-<img src="https://img.shields.io/badge/DATA_STRUCTURE_&_ALGORITHM-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139" href="record/dsa/README.md">
-<br>
-<img src="https://img.shields.io/badge/DIGITAL_ELECTRONICS-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139" href="record/de/README.md">
-<br>
+[![C++](https://img.shields.io/badge/C++_PROGRAMMING-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](record/cpp/README.md")
+
+[![DSA](https://img.shields.io/badge/DATA_STRUCTURE_&_ALGORITHM-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](record/dsa/README.md)
+
+[![DE](https://img.shields.io/badge/DIGITAL_ELECTRONICS-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](record/de/README.md)
 
 [![IST](https://img.shields.io/badge/SENSOR_TECHNOLOGY-%23000000.svg?style=for-the-badge&logo=Sennheiser&logoColor=FF7139)](record/ist/README.md)
 
@@ -24,6 +23,6 @@
 
 <div align=center>
 
-[![Unlicense](https://img.shields.io/badge/ARR--2025-%23000000.svg?style=for-the-badge&logo=Contentstack&logoColor=FF7139)](LICENSE)
+[![ARR-2025:DorukAysor](https://img.shields.io/badge/ARR--2025-%23000000.svg?style=for-the-badge&logo=Contentstack&logoColor=FF7139)](LICENSE)
 
 </div>
