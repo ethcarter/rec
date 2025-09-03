@@ -13,9 +13,9 @@
 
 > To implement deletion operation in singly linked list <br> [![Experiment 04](https://img.shields.io/badge/Experiment_04-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_04.md)
 
-To implement trasversal operation in singly linked list <br> [![Experiment 05](https://img.shields.io/badge/Experiment_05-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_05.md)
+> To implement trasversal operation in singly linked list <br> [![Experiment 05](https://img.shields.io/badge/Experiment_05-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_05.md)
 
-To implement **insertion**, **deletion** and **trasversal** operation in singly linked list <br> [![Experiment 06](https://img.shields.io/badge/Experiment_06-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_06.md)
+> To implement **insertion**, **deletion** and **trasversal** operation in singly linked list <br> [![Experiment 06](https://img.shields.io/badge/Experiment_06-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_06.md)
 
 </div>
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
