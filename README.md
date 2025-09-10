@@ -8,11 +8,9 @@
 
 [![DSA](https://img.shields.io/badge/DATA_STRUCTURE_&_ALGORITHM-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](record/dsa/README.md)
 
-[![DE](https://img.shields.io/badge/DIGITAL_ELECTRONICS-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](record/de/README.md)
+[![DE](https://img.shields.io/badge/Invalid--DIGITAL_ELECTRONICS-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](record/de/README.md)
 
-[![IST](https://img.shields.io/badge/SENSOR_TECHNOLOGY-%23000000.svg?style=for-the-badge&logo=Sennheiser&logoColor=FF7139)](record/ist/README.md)
-
-[![IOT](https://img.shields.io/badge/INTERNET_OF_THINGS-%23000000.svg?style=for-the-badge&logo=Contentstack&logoColor=FF7139)](record/iot/README.md)
+[![IOT](https://img.shields.io/badge/Invalid--INTERNET_OF_THINGS-%23000000.svg?style=for-the-badge&logo=Contentstack&logoColor=FF7139)](record/iot/README.md)
 
 <br>
 </div>
