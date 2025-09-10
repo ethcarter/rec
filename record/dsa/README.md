@@ -19,7 +19,9 @@
 
 > To write programs to create and manipulate **circular** and **doubly** linked lists <br> [![Experiment 08](https://img.shields.io/badge/Experiment_07-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_07.md)
 
-> To implement **stack** and **queue** operations using linked lists <br> [![Experiment 08](https://img.shields.io/badge/Experiment_08-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_08.md)
+> To implement **stack** operations using linked lists <br> [![Experiment 08](https://img.shields.io/badge/Experiment_08-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_08.md)
+
+> To implement **queue** operations using linked lists <br> [![Experiment 09](https://img.shields.io/badge/Experiment_09-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_08.md)
 
 </div>
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
