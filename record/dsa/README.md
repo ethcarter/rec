@@ -42,7 +42,11 @@
 
 > Develop programs for types of binary trees (binary search tree, AVL tree) <br> <br> [![exp_btn](https://img.shields.io/badge/Experiment_11-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_11.md)
 
+---
+
 > Implement graph representations (adjacency list, adjacency
 matrix) and basic graph traversals (BFS, DFS) <br> <br> [![exp_btn](https://img.shields.io/badge/Experiment_12-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_12.md)
+
+---
 
 > Implement sorting algorithms: bubble sort, selection sort, insertion sort, merge sort, quick sort <br> <br> [![exp_btn](https://img.shields.io/badge/Experiment_13-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_13.md)
