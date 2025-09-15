@@ -50,7 +50,7 @@
 > > Implementation of **insertion sorting** algorithm  
 [![exp_btn](https://img.shields.io/badge/Experiment_20-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/20.md)
 > > 
-> > Implementation of **merge sorting** algorithm
+> > Implementation of **merge sorting** algorithm  
 [![exp_btn](https://img.shields.io/badge/Experiment_21-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/21.md)
 > > 
 > > Implementation of **quick sorting** algorithm  
