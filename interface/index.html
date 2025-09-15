@@ -1,0 +1,317 @@
+<!DOCTYPE html><!DOCTYPE html>
+
+<html lang="en"><html lang="en">
+
+<head><head>
+
+    <meta charset="UTF-8">    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Comprehensive practical records for Computer Science courses including C++, DSA, and Digital Electronics">    <meta name="description" content="Comprehensive practical records for Computer Science courses including C++, DSA, and Digital Electronics">
+
+    <meta name="keywords" content="computer science, practical records, C++, data structures, algorithms, digital electronics">    <meta name="keywords" content="computer science, practical records, C++, data structures, algorithms, digital electronics">
+
+    <meta name="author" content="dorukaysor">    <meta name="author" content="dorukaysor">
+
+    <meta name="theme-color" content="#FF7139">    <meta name="theme-color" content="#FF7139">
+
+        
+
+    <!-- Open Graph / Facebook -->    <!-- Open Graph / Facebook -->
+
+    <meta property="og:type" content="website">    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://iancarter-dev.github.io/ambience/interface/">    <meta property="og:url" content="https://iancarter-dev.github.io/ambience/interface/">
+
+    <meta property="og:title" content="Ambience - Practical Records">    <meta property="og:title" content="Ambience - Practical Records">
+
+    <meta property="og:description" content="Comprehensive practical records for Computer Science courses">    <meta property="og:description" content="Comprehensive practical records for Computer Science courses">
+
+    <meta property="og:image" content="https://iancarter-dev.github.io/ambience/interface/preview.png">    <meta property="og:image" content="https://iancarter-dev.github.io/ambience/interface/preview.png">
+
+
+
+    <!-- Twitter -->    <!-- Twitter -->
+
+    <meta property="twitter:card" content="summary_large_image">    <meta property="twitter:card" content="summary_large_image">
+
+    <meta property="twitter:url" content="https://iancarter-dev.github.io/ambience/interface/">    <meta property="twitter:url" content="https://iancarter-dev.github.io/ambience/interface/">
+
+    <meta property="twitter:title" content="Ambience - Practical Records">    <meta property="twitter:title" content="Ambience - Practical Records">
+
+    <meta property="twitter:description" content="Comprehensive practical records for Computer Science courses">    <meta property="twitter:description" content="Comprehensive practical records for Computer Science courses">
+
+    <meta property="twitter:image" content="https://iancarter-dev.github.io/ambience/interface/preview.png">    <meta property="twitter:image" content="https://iancarter-dev.github.io/ambience/interface/preview.png">
+
+
+
+    <!-- PWA -->    <!-- PWA -->
+
+    <link rel="manifest" href="/manifest.json">    <link rel="manifest" href="/manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="apple-mobile-web-app-title" content="Ambience">    <meta name="apple-mobile-web-app-title" content="Ambience">
+
+
+
+    <!-- Favicon -->    <!-- Favicon -->
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF7139'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'/></svg>">    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF7139'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'/></svg>">
+
+        
+
+    <title>Ambience - Practical Records</title>    <title>Ambience - Practical Records</title>
+
+        
+
+    <!-- Material Icons -->    <!-- Material Icons -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        
+
+    <!-- GitHub Markdown CSS -->    <!-- GitHub Markdown CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.4.0/github-markdown-dark.min.css">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.4.0/github-markdown-dark.min.css">
+
+        
+
+    <!-- Marked.js for Markdown parsing -->    <!-- Marked.js for Markdown parsing -->
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js"></script>    <script src="https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js"></script>
+
+        
+
+    <!-- DOMPurify for XSS protection -->    <!-- DOMPurify for XSS protection -->
+
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+
+        
+
+    <!-- Prism.js for syntax highlighting -->    <!-- Prism.js for syntax highlighting -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+        
+
+    <!-- Custom CSS -->    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="styles.css">    <link rel="stylesheet" href="styles.css">
+
+</head></head>
+
+<body><body>
+
+    <!-- Navigation Header -->    <!-- Navigation Header -->
+
+    <header class="navbar">    <header class="navbar">
+
+        <div class="nav-container">        <div class="nav-container">
+
+            <div class="nav-brand" onclick="navigateHome()">            <div class="nav-brand" onclick="navigateHome()">
+
+                <span class="material-icons">school</span>                <span class="material-icons">school</span>
+
+                <span class="brand-text">Ambience</span>                <span class="brand-text">Ambience</span>
+
+            </div>            </div>
+
+                        
+
+            <nav class="nav-menu">            <nav class="nav-menu">
+
+                <div class="breadcrumb" id="breadcrumb">                <div class="breadcrumb" id="breadcrumb">
+
+                    <span class="breadcrumb-item active" onclick="navigateHome()">                    <span class="breadcrumb-item active" onclick="navigateHome()">
+
+                        <span class="material-icons">home</span>                        <span class="material-icons">home</span>
+
+                        Home                        Home
+
+                    </span>                    </span>
+
+                </div>                </div>
+
+                                
+
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+
+                    <span class="material-icons">brightness_6</span>                    <span class="material-icons">brightness_6</span>
+
+                </button>                </button>
+
+                                
+
+                <button class="refresh-btn" id="refreshBtn" onclick="refreshContent()">                <button class="refresh-btn" id="refreshBtn" onclick="refreshContent()">
+
+                    <span class="material-icons">refresh</span>                    <span class="material-icons">refresh</span>
+
+                </button>                </button>
+
+            </nav>            </nav>
+
+        </div>        </div>
+
+    </header>    </header>
+
+
+
+    <!-- Main Content Area -->    <!-- Main Content Area -->
+
+    <main class="main-content">    <main class="main-content">
+
+        <!-- Sidebar Navigation -->        <!-- Sidebar Navigation -->
+
+        <aside class="sidebar" id="sidebar">        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-header">            <div class="sidebar-header">
+
+                <h3>Navigation</h3>                <h3>Navigation</h3>
+
+                <button class="sidebar-toggle" onclick="toggleSidebar()">                <button class="sidebar-toggle" onclick="toggleSidebar()">
+
+                    <span class="material-icons">chevron_left</span>                    <span class="material-icons">chevron_left</span>
+
+                </button>                </button>
+
+            </div>            </div>
+
+                        
+
+            <div class="nav-tree" id="navTree">            <div class="nav-tree" id="navTree">
+
+                <!-- Dynamic navigation will be populated here -->                <!-- Dynamic navigation will be populated here -->
+
+            </div>            </div>
+
+        </aside>        </aside>
+
+
+
+        <!-- Content Display Area -->        <!-- Content Display Area -->
+
+        <section class="content-area">        <section class="content-area">
+
+            <div class="content-header" id="contentHeader">            <div class="content-header" id="contentHeader">
+
+                <h1 id="pageTitle">Welcome to Ambience</h1>                <h1 id="pageTitle">Welcome to Ambience</h1>
+
+                <div class="content-actions">                <div class="content-actions">
+
+                    <button class="action-btn" id="fullscreenBtn" onclick="toggleFullscreen()">                    <button class="action-btn" id="fullscreenBtn" onclick="toggleFullscreen()">
+
+                        <span class="material-icons">fullscreen</span>                        <span class="material-icons">fullscreen</span>
+
+                    </button>                    </button>
+
+                </div>                </div>
+
+            </div>            </div>
+
+                        
+
+            <div class="content-body" id="contentBody">            <div class="content-body" id="contentBody">
+
+                <!-- Dynamic content will be loaded here -->                <!-- Dynamic content will be loaded here -->
+
+                <div class="loading-spinner" id="loadingSpinner">                <div class="loading-spinner" id="loadingSpinner">
+
+                    <div class="spinner"></div>                    <div class="spinner"></div>
+
+                    <p>Loading content...</p>                    <p>Loading content...</p>
+
+                </div>                </div>
+
+            </div>            </div>
+
+        </section>        </section>
+
+    </main>    </main>
+
+
+
+    <!-- Floating Action Button -->    <!-- Floating Action Button -->
+
+    <div class="fab-container">    <div class="fab-container">
+
+        <button class="fab" id="fab" onclick="toggleFab()">        <button class="fab" id="fab" onclick="toggleFab()">
+
+            <span class="material-icons">add</span>            <span class="material-icons">add</span>
+
+        </button>        </button>
+
+                
+
+        <div class="fab-menu" id="fabMenu">        <div class="fab-menu" id="fabMenu">
+
+            <button class="fab-item" onclick="goBack()" title="Go Back">            <button class="fab-item" onclick="goBack()" title="Go Back">
+
+                <span class="material-icons">arrow_back</span>                <span class="material-icons">arrow_back</span>
+
+            </button>            </button>
+
+            <button class="fab-item" onclick="goForward()" title="Go Forward">            <button class="fab-item" onclick="goForward()" title="Go Forward">
+
+                <span class="material-icons">arrow_forward</span>                <span class="material-icons">arrow_forward</span>
+
+            </button>            </button>
+
+            <button class="fab-item" onclick="scrollToTop()" title="Scroll to Top">            <button class="fab-item" onclick="scrollToTop()" title="Scroll to Top">
+
+                <span class="material-icons">keyboard_arrow_up</span>                <span class="material-icons">keyboard_arrow_up</span>
+
+            </button>            </button>
+
+        </div>        </div>
+
+    </div>    </div>
+
+
+
+    <!-- Footer -->    <!-- Footer -->
+
+    <footer class="footer">    <footer class="footer">
+
+        <div class="footer-content">        <div class="footer-content">
+
+            <p>&copy; 2025 Ambience - Practical Records. Licensed under ARR-2025:dorukaysor</p>            <p>&copy; 2025 Ambience - Practical Records. Licensed under ARR-2025:dorukaysor</p>
+
+            <div class="footer-links">            <div class="footer-links">
+
+                <a href="#" onclick="loadMarkdown('LICENSE')" class="footer-link">                <a href="#" onclick="loadMarkdown('LICENSE')" class="footer-link">
+
+                    <span class="material-icons">description</span>                    <span class="material-icons">description</span>
+
+                    License                    License
+
+                </a>                </a>
+
+                <span class="footer-separator">|</span>                <span class="footer-separator">|</span>
+
+                <span class="last-updated" id="lastUpdated">Last updated: Never</span>                <span class="last-updated" id="lastUpdated">Last updated: Never</span>
+
+            </div>            </div>
+
+        </div>        </div>
+
+    </footer>    </footer>
+
+
+
+    <!-- Custom JavaScript -->    <!-- Custom JavaScript -->
+
+    <script src="script.js"></script>    <script src="script.js"></script>
+
+</body></body>
+
+</html></html>
