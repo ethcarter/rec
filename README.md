@@ -8,7 +8,7 @@
 
 > [![DSA](https://img.shields.io/badge/DATA_STRUCTURE_&_ALGORITHM-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](record/dsa/README.md)
 
-> [![DE](https://img.shields.io/badge/DIGITAL_ELECTRONICS-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](record/de/README.md)
+> [![DE](https://img.shields.io/badge/DE_&_CO-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](record/de/README.md)
 
 ---
 ---
