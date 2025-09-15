@@ -6,7 +6,7 @@ const GITHUB_CONFIG = {
     owner: 'iancarter-dev',
     repo: 'ambience',
     branch: 'main',
-    baseUrl: window.location.hostname === 'localhost' ? '..' : '/ambience'
+    baseUrl: '..'
 };
 
 const CONFIG = {
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
         try {
-            const swPath = window.location.hostname === 'localhost' ? '/sw.js' : '/ambience/interface/sw.js';
+            const swPath = './sw.js';
             const registration = await navigator.serviceWorker.register(swPath);
             console.log('Service Worker registered successfully:', registration);
             

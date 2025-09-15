@@ -5,8 +5,8 @@ const DYNAMIC_CACHE = 'ambience-interface-dynamic-v1.0.0';
 
 // Detect if running on GitHub Pages
 const isGitHubPages = self.location.hostname.includes('github.io');
-const baseUrl = isGitHubPages ? '/ambience' : '/..';
-const interfaceUrl = isGitHubPages ? '/ambience/interface' : '';
+const baseUrl = '..';
+const interfaceUrl = '.';
 
 // Files to cache immediately
 const STATIC_FILES = [

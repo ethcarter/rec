@@ -3,13 +3,13 @@
   "short_name": "Ambience",
   "description": "Comprehensive practical records for Computer Science courses",
   "version": "1.0.0",
-  "start_url": "/ambience/interface/",
+  "start_url": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "theme_color": "#FF7139",
   "background_color": "#000000",
   "lang": "en",
-  "scope": "/ambience/interface/",
+  "scope": "./",
   "icons": [
     {
       "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF7139'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'/></svg>",
