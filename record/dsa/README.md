@@ -36,8 +36,8 @@
 
 ---
 
-> Implement insertion, deletion, traversal operations in binary tree <br> <br> [![exp_btn](https://img.shields.io/badge/Experiment_10-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_10.md)
+> Implement **insertion**, **deletion**, **traversal** operations in binary tree <br> <br> [![exp_btn](https://img.shields.io/badge/Experiment_10-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_10.md)
 
 ---
 
-> Implement insertion, deletion, traversal operations in binary tree <br> <br> [![exp_btn](https://img.shields.io/badge/Experiment_11-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_11.md)
+> Develop programs for types of binary trees (binary search tree, AVL tree) <br> <br> [![exp_btn](https://img.shields.io/badge/Experiment_11-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/_11.md)
