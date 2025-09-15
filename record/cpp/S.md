@@ -1,6 +1,6 @@
 ## **Unbpublished Records**
 
-> ***Note: all 13 experiments are up-to-date***
+> > ***Note: all 13 experiments are up-to-date***
 
 > Write a program to demonstrate **applications of n-dimensional arrays** in C++  
 [![exp_btn](https://img.shields.io/badge/Experiment_06-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](experiments/6.md)
