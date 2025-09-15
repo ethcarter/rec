@@ -19,11 +19,9 @@ plugins:
 
 # Exclude files from Jekyll processing
 exclude:
-  - README.md
   - LICENSE
   - S.md
   - dev.txt
-  - config.json
   - .github/
   - .gitignore
   - Gemfile
@@ -31,29 +29,22 @@ exclude:
   - node_modules/
   - vendor/
   - DEPLOYMENT.md
+  - WEB_README.md
+  - "*.md"
 
-# Include files in Jekyll processing
+# Include files in Jekyll processing - ONLY the interface directory
 include:
-  - .htaccess
-  - _pages
   - interface/
 
-# Collections
-collections:
-  experiments:
-    output: false
-
-# Defaults
+# Disable Jekyll processing for the interface directory
 defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
   - scope:
       path: "interface"
     values:
-      layout: "default"
+      layout: null
+
+# Collections
+collections: {}
 
 # SEO settings
 google_analytics: # Add your GA tracking ID here if needed
@@ -64,12 +55,3 @@ twitter:
 
 github:
   username: iancarter-dev
-
-# Compression
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  startings: []
-  blanklines: false
-  profile: false
