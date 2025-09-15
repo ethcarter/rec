@@ -10,10 +10,8 @@
 
 > [![DE](https://img.shields.io/badge/DIGITAL_ELECTRONICS-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](record/de/README.md)
 
-> [![IOT](https://img.shields.io/badge/INTERNET_OF_THINGS-%23000000.svg?style=for-the-badge&logo=Contentstack&logoColor=FF7139)](record/iot/README.md)
-
+---
 ---
 
 ### **📃 Licensed Under**
-
-> [![ARR-2025:DorukAysor](https://img.shields.io/badge/ARR--2025-%23000000.svg?style=for-the-badge&logo=Contentstack&logoColor=FF7139)](LICENSE)
+> [![ARR-2025:dorukaysor](https://img.shields.io/badge/ARR--2025-%23000000.svg?style=for-the-badge&logo=Contentstack&logoColor=FF7139)](LICENSE)
