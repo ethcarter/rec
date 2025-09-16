@@ -13,5 +13,10 @@
 ---
 ---
 
-### **📃 Licensed Under**
-> [![ARR-2025:dorukaysor](https://img.shields.io/badge/ARR--2025-%23000000.svg?style=for-the-badge&logo=Contentstack&logoColor=FF7139)](LICENSE)
+> See [License](LICENSE) before performing any actions in this repository.
+
+<br>
+
+---
+
+<h4 align=center><b><i>Thank You</i></b></h4>
