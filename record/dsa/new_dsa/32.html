@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 32</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 32</strong></h3>
+    <blockquote><em>Graphs</em></blockquote>
+    <p><em>DSA</em></p>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>To simulate RAID performance characteristics and fault tolerance mechanisms</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct Disk {
+    int diskID;
+    char data[10];
+};
+
+struct RAIDArray {
+    struct Disk* disks;
+    int numDisks;
+    int raidLevel;
+};
+
+void initRAID0(struct RAIDArray* raid, int numDisks) {
+    raid-&gt;disks = (struct Disk*)malloc(numDisks * sizeof(struct Disk));
+    raid-&gt;numDisks = numDisks;
+    raid-&gt;raidLevel = 0;
+    
+    for (int i = 0; i &lt; numDisks; i++) {
+        raid-&gt;disks[i].diskID = i;
+        sprintf(raid-&gt;disks[i].data, &quot;Data%d&quot;, i);
+    }
+}
+
+void initRAID1(struct RAIDArray* raid) {
+    raid-&gt;disks = (struct Disk*)malloc(2 * sizeof(struct Disk));
+    raid-&gt;numDisks = 2;
+    raid-&gt;raidLevel = 1;
+    
+    sprintf(raid-&gt;disks[0].data, &quot;Original&quot;);
+    sprintf(raid-&gt;disks[1].data, &quot;Mirror&quot;);
+}
+
+void displayRAID(struct RAIDArray* raid) {
+    printf(&quot;RAID %d Configuration:\n&quot;, raid-&gt;raidLevel);
+    
+    if (raid-&gt;raidLevel == 0) {
+        printf(&quot;Striping across %d disks:\n&quot;, raid-&gt;numDisks);
+        for (int i = 0; i &lt; raid-&gt;numDisks; i++) {
+            printf(&quot;Disk %d: %s\n&quot;, raid-&gt;disks[i].diskID, raid-&gt;disks[i].data);
+        }
+        printf(&quot;Benefits: High performance, no redundancy\n&quot;);
+    }
+    else if (raid-&gt;raidLevel == 1) {
+        printf(&quot;Mirroring with 2 disks:\n&quot;);
+        printf(&quot;Primary: %s\n&quot;, raid-&gt;disks[0].data);
+        printf(&quot;Mirror: %s\n&quot;, raid-&gt;disks[1].data);
+        printf(&quot;Benefits: Fault tolerance, data redundancy\n&quot;);
+    }
+}
+
+int main() {
+    struct RAIDArray raid0, raid1;
+    
+    initRAID0(&amp;raid0, 4);
+    displayRAID(&amp;raid0);
+    
+    printf(&quot;\n&quot;);
+    
+    initRAID1(&amp;raid1);
+    displayRAID(&amp;raid1);
+    
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>RAID 0 Configuration:
+Striping across 4 disks:
+Disk 0: Data0
+Disk 1: Data1
+Disk 2: Data2
+Disk 3: Data3
+Benefits: High performance, no redundancy
+
+RAID 1 Configuration:
+Mirroring with 2 disks:
+Primary: Original
+Mirror: Mirror
+Benefits: Fault tolerance, data redundancy</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>RAID configurations provide different combinations of performance, capacity, and fault tolerance for storage systems</blockquote>
+</body>
+</html>

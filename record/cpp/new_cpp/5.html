@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 05</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 05</strong></h3>
+    <blockquote><em>C++ Programming</em></blockquote>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>Write a program using <em>Loop</em> statements in C++</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n;
+    cout &lt;&lt; &quot;Enter a number: &quot;;
+    cin &gt;&gt; n;
+
+    // For loop
+    cout &lt;&lt; &quot;\nUsing for loop:\n&quot;;
+    for (int i = 1; i &lt;= n; i++) {
+        cout &lt;&lt; i &lt;&lt; &quot; &quot;;
+    }
+    cout &lt;&lt; endl;
+
+    // While loop
+    cout &lt;&lt; &quot;\nUsing while loop:\n&quot;;
+    int i = 1;
+    while (i &lt;= n) {
+        cout &lt;&lt; i &lt;&lt; &quot; &quot;;
+        i++;
+    }
+    cout &lt;&lt; endl;
+
+    // Do-while loop
+    cout &lt;&lt; &quot;\nUsing do-while loop:\n&quot;;
+    i = 1;
+    if (n &gt;= 1) {
+        do {
+            cout &lt;&lt; i &lt;&lt; &quot; &quot;;
+            i++;
+        } while (i &lt;= n);
+    }
+    cout &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>Enter a number: 6
+
+Using for loop:
+1 2 3 4 5 6
+
+Using while loop:
+1 2 3 4 5 6
+
+Using do-while loop:
+1 2 3 4 5 6</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>A program was successfully written to demonstrate loop statements (for, while, do-while) in C++.</blockquote>
+</body>
+</html>

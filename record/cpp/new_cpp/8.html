@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 08</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 08</strong></h3>
+    <blockquote><em>C++ Programming</em></blockquote>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>Write a program to demonstrate parameter passing mechanism in C++</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+void callByValue(int x) {
+    x = x + 10;
+    cout &lt;&lt; &quot;Inside callByValue: &quot; &lt;&lt; x &lt;&lt; endl;
+}
+
+void callByReference(int &amp;x) {
+    x = x + 10;
+    cout &lt;&lt; &quot;Inside callByReference: &quot; &lt;&lt; x &lt;&lt; endl;
+}
+
+void callByPointer(int *x) {
+    *x = *x + 10;
+    cout &lt;&lt; &quot;Inside callByPointer: &quot; &lt;&lt; *x &lt;&lt; endl;
+}
+
+int main() {
+    int num = 5;
+    
+    cout &lt;&lt; &quot;Original value: &quot; &lt;&lt; num &lt;&lt; endl;
+    
+    callByValue(num);
+    cout &lt;&lt; &quot;After callByValue: &quot; &lt;&lt; num &lt;&lt; endl;
+    
+    callByReference(num);
+    cout &lt;&lt; &quot;After callByReference: &quot; &lt;&lt; num &lt;&lt; endl;
+    
+    callByPointer(&amp;num);
+    cout &lt;&lt; &quot;After callByPointer: &quot; &lt;&lt; num &lt;&lt; endl;
+    
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>Original value: 5
+Inside callByValue: 15
+After callByValue: 5
+Inside callByReference: 15
+After callByReference: 15
+Inside callByPointer: 25
+After callByPointer: 25</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>Parameter passing demonstrates call by value preserves original while reference and pointer modify original values</blockquote>
+</body>
+</html>

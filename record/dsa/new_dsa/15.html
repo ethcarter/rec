@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 15</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 15</strong></h3>
+    <blockquote><em>Non-Linear Data Structures</em></blockquote>
+    <p><em>DSA</em></p>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>Develop program for the AVL tree</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct Node {
+    int data;
+    struct Node* left;
+    struct Node* right;
+    int height;
+};
+
+int getHeight(struct Node* node) {
+    if (node == NULL) return 0;
+    return node-&gt;height;
+}
+
+int max(int a, int b) {
+    return (a &gt; b) ? a : b;
+}
+
+struct Node* createNode(int data) {
+    struct Node* node = (struct Node*)malloc(sizeof(struct Node));
+    node-&gt;data = data;
+    node-&gt;left = NULL;
+    node-&gt;right = NULL;
+    node-&gt;height = 1;
+    return node;
+}
+
+struct Node* rightRotate(struct Node* y) {
+    struct Node* x = y-&gt;left;
+    struct Node* T2 = x-&gt;right;
+    
+    x-&gt;right = y;
+    y-&gt;left = T2;
+    
+    y-&gt;height = max(getHeight(y-&gt;left), getHeight(y-&gt;right)) + 1;
+    x-&gt;height = max(getHeight(x-&gt;left), getHeight(x-&gt;right)) + 1;
+    
+    return x;
+}
+
+struct Node* leftRotate(struct Node* x) {
+    struct Node* y = x-&gt;right;
+    struct Node* T2 = y-&gt;left;
+    
+    y-&gt;left = x;
+    x-&gt;right = T2;
+    
+    x-&gt;height = max(getHeight(x-&gt;left), getHeight(x-&gt;right)) + 1;
+    y-&gt;height = max(getHeight(y-&gt;left), getHeight(y-&gt;right)) + 1;
+    
+    return y;
+}
+
+int getBalance(struct Node* node) {
+    if (node == NULL) return 0;
+    return getHeight(node-&gt;left) - getHeight(node-&gt;right);
+}
+
+struct Node* insert(struct Node* node, int data) {
+    if (node == NULL) return createNode(data);
+    
+    if (data &lt; node-&gt;data) {
+        node-&gt;left = insert(node-&gt;left, data);
+    } else if (data &gt; node-&gt;data) {
+        node-&gt;right = insert(node-&gt;right, data);
+    } else {
+        return node;
+    }
+    
+    node-&gt;height = 1 + max(getHeight(node-&gt;left), getHeight(node-&gt;right));
+    
+    int balance = getBalance(node);
+    
+    // Left Left Case
+    if (balance &gt; 1 &amp;&amp; data &lt; node-&gt;left-&gt;data) {
+        return rightRotate(node);
+    }
+    
+    // Right Right Case
+    if (balance &lt; -1 &amp;&amp; data &gt; node-&gt;right-&gt;data) {
+        return leftRotate(node);
+    }
+    
+    // Left Right Case
+    if (balance &gt; 1 &amp;&amp; data &gt; node-&gt;left-&gt;data) {
+        node-&gt;left = leftRotate(node-&gt;left);
+        return rightRotate(node);
+    }
+    
+    // Right Left Case
+    if (balance &lt; -1 &amp;&amp; data &lt; node-&gt;right-&gt;data) {
+        node-&gt;right = rightRotate(node-&gt;right);
+        return leftRotate(node);
+    }
+    
+    return node;
+}
+
+void inorder(struct Node* root) {
+    if (root != NULL) {
+        inorder(root-&gt;left);
+        printf(&quot;%d &quot;, root-&gt;data);
+        inorder(root-&gt;right);
+    }
+}
+
+int main() {
+    struct Node* root = NULL;
+    
+    root = insert(root, 10);
+    root = insert(root, 20);
+    root = insert(root, 30);
+    root = insert(root, 40);
+    root = insert(root, 50);
+    root = insert(root, 25);
+    
+    printf(&quot;AVL Tree Inorder: &quot;);
+    inorder(root);
+    printf(&quot;\n&quot;);
+    
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>AVL Tree Inorder: 10 20 25 30 40 50</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>AVL tree maintains self-balancing property through rotations ensuring O(log n) time complexity for all operations</blockquote>
+</body>
+</html>

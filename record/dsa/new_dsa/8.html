@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 08</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 08</strong></h3>
+    <blockquote><em>Linked Lists</em></blockquote>
+    <p><em>DSA</em></p>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>To implement <strong>stack</strong> operations using linked lists.</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+// Node structure
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* createNode(int val) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    if (newNode == NULL) {
+        printf(&quot;Memory allocation failed\n&quot;);
+        exit(1);
+    }
+    newNode-&gt;data = val;
+    newNode-&gt;next = NULL;
+    return newNode;
+}
+
+// ---------------- STACK USING LINKED LIST ----------------
+struct Stack {
+    struct Node* top;
+};
+
+void initStack(struct Stack* s) {
+    s-&gt;top = NULL;
+}
+
+void push(struct Stack* s, int val) {
+    struct Node* newNode = createNode(val);
+    newNode-&gt;next = s-&gt;top;
+    s-&gt;top = newNode;
+}
+
+void pop(struct Stack* s) {
+    if (!s-&gt;top) {
+        printf(&quot;Stack Underflow\n&quot;);
+        return;
+    }
+    struct Node* temp = s-&gt;top;
+    s-&gt;top = s-&gt;top-&gt;next;
+    free(temp);
+}
+
+void peekStack(struct Stack* s) {
+    if (!s-&gt;top) printf(&quot;Stack is empty\n&quot;);
+    else printf(&quot;Top element: %d\n&quot;, s-&gt;top-&gt;data);
+}
+
+void displayStack(struct Stack* s) {
+    struct Node* temp = s-&gt;top;
+    while (temp) {
+        printf(&quot;%d -&gt; &quot;, temp-&gt;data);
+        temp = temp-&gt;next;
+    }
+    printf(&quot;NULL\n&quot;);
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>=== STACK OPERATIONS ===
+30 -&gt; 20 -&gt; 10 -&gt; NULL
+20 -&gt; 10 -&gt; NULL
+Top element: 20</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>Stack implemented using linked list supports dynamic push and pop operations with efficient memory usage.</blockquote>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 11</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 11</strong></h3>
+    <blockquote><em>C++ Programming</em></blockquote>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>Write a program in C++ to demonstrate file operations</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    // Writing to file
+    ofstream outFile(&quot;sample.txt&quot;);
+    if (outFile.is_open()) {
+        outFile &lt;&lt; &quot;Hello World!&quot; &lt;&lt; endl;
+        outFile &lt;&lt; &quot;File operations in C++&quot; &lt;&lt; endl;
+        outFile &lt;&lt; &quot;Line 3 of the file&quot; &lt;&lt; endl;
+        outFile.close();
+        cout &lt;&lt; &quot;Data written to file successfully!&quot; &lt;&lt; endl;
+    }
+    
+    // Reading from file
+    ifstream inFile(&quot;sample.txt&quot;);
+    string line;
+    if (inFile.is_open()) {
+        cout &lt;&lt; &quot;Reading from file:&quot; &lt;&lt; endl;
+        while (getline(inFile, line)) {
+            cout &lt;&lt; line &lt;&lt; endl;
+        }
+        inFile.close();
+    }
+    
+    // Appending to file
+    ofstream appendFile(&quot;sample.txt&quot;, ios::app);
+    if (appendFile.is_open()) {
+        appendFile &lt;&lt; &quot;Appended line&quot; &lt;&lt; endl;
+        appendFile.close();
+        cout &lt;&lt; &quot;Data appended successfully!&quot; &lt;&lt; endl;
+    }
+    
+    // Reading again to show append
+    ifstream finalRead(&quot;sample.txt&quot;);
+    if (finalRead.is_open()) {
+        cout &lt;&lt; &quot;Final file content:&quot; &lt;&lt; endl;
+        while (getline(finalRead, line)) {
+            cout &lt;&lt; line &lt;&lt; endl;
+        }
+        finalRead.close();
+    }
+    
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>Data written to file successfully!
+Reading from file:
+Hello World!
+File operations in C++
+Line 3 of the file
+Data appended successfully!
+Final file content:
+Hello World!
+File operations in C++
+Line 3 of the file
+Appended line</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>File operations enable persistent data storage and retrieval through read, write, and append operations</blockquote>
+</body>
+</html>

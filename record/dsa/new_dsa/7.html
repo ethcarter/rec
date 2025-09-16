@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 07</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 07</strong></h3>
+    <blockquote><em>Linked Lists</em></blockquote>
+    <p><em>DSA</em></p>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>To write programs to create and manipulate circular and doubly linked lists.</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+// Doubly Linked List
+typedef struct DNode {
+    int data;
+    struct DNode* prev;
+    struct DNode* next;
+} DNode;
+
+DNode* createDNode(int val) {
+    DNode* newNode = (DNode*)malloc(sizeof(DNode));
+    newNode-&gt;data = val;
+    newNode-&gt;prev = NULL;
+    newNode-&gt;next = NULL;
+    return newNode;
+}
+
+typedef struct {
+    DNode* head;
+} DoublyLinkedList;
+
+void dll_init(DoublyLinkedList* list) {
+    list-&gt;head = NULL;
+}
+
+void dll_insert(DoublyLinkedList* list, int val) {
+    DNode* newNode = createDNode(val);
+    if (!list-&gt;head) {
+        list-&gt;head = newNode;
+        return;
+    }
+    DNode* temp = list-&gt;head;
+    while (temp-&gt;next) temp = temp-&gt;next;
+    temp-&gt;next = newNode;
+    newNode-&gt;prev = temp;
+}
+
+void dll_delete(DoublyLinkedList* list, int val) {
+    DNode* temp = list-&gt;head;
+    while (temp &amp;&amp; temp-&gt;data != val) temp = temp-&gt;next;
+    if (!temp) return;
+    if (temp-&gt;prev) temp-&gt;prev-&gt;next = temp-&gt;next;
+    if (temp-&gt;next) temp-&gt;next-&gt;prev = temp-&gt;prev;
+    if (temp == list-&gt;head) list-&gt;head = temp-&gt;next;
+    free(temp);
+}
+
+void dll_traverse_forward(DoublyLinkedList* list) {
+    DNode* temp = list-&gt;head;
+    while (temp) {
+        printf(&quot;%d &lt;-&gt; &quot;, temp-&gt;data);
+        temp = temp-&gt;next;
+    }
+    printf(&quot;NULL\n&quot;);
+}
+
+void dll_traverse_backward(DoublyLinkedList* list) {
+    if (!list-&gt;head) return;
+    DNode* temp = list-&gt;head;
+    while (temp-&gt;next) temp = temp-&gt;next;
+    while (temp) {
+        printf(&quot;%d &lt;-&gt; &quot;, temp-&gt;data);
+        temp = temp-&gt;prev;
+    }
+    printf(&quot;NULL\n&quot;);
+}
+
+// Circular Linked List
+typedef struct CNode {
+    int data;
+    struct CNode* next;
+} CNode;
+
+CNode* createCNode(int val) {
+    CNode* newNode = (CNode*)malloc(sizeof(CNode));
+    newNode-&gt;data = val;
+    newNode-&gt;next = NULL;
+    return newNode;
+}
+
+typedef struct {
+    CNode* head;
+} CircularLinkedList;
+
+void cll_init(CircularLinkedList* list) {
+    list-&gt;head = NULL;
+}
+
+void cll_insert(CircularLinkedList* list, int val) {
+    CNode* newNode = createCNode(val);
+    if (!list-&gt;head) {
+        list-&gt;head = newNode;
+        newNode-&gt;next = newNode;  // Points to itself
+        return;
+    }
+    CNode* temp = list-&gt;head;
+    while (temp-&gt;next != list-&gt;head) temp = temp-&gt;next;
+    temp-&gt;next = newNode;
+    newNode-&gt;next = list-&gt;head;
+}
+
+void cll_delete(CircularLinkedList* list, int val) {
+    if (!list-&gt;head) return;
+    if (list-&gt;head-&gt;data == val &amp;&amp; list-&gt;head-&gt;next == list-&gt;head) {
+        free(list-&gt;head);
+        list-&gt;head = NULL;
+        return;
+    }
+    CNode* curr = list-&gt;head;
+    CNode* prev = NULL;
+    do {
+        if (curr-&gt;data == val) {
+            if (curr == list-&gt;head) {
+                // Find the last node
+                CNode* last = list-&gt;head;
+                while (last-&gt;next != list-&gt;head) last = last-&gt;next;
+                
+                list-&gt;head = list-&gt;head-&gt;next;
+                last-&gt;next = list-&gt;head;
+                free(curr);
+            } else {
+                prev-&gt;next = curr-&gt;next;
+                free(curr);
+            }
+            return;
+        }
+        prev = curr;
+        curr = curr-&gt;next;
+    } while (curr != list-&gt;head);
+}
+
+void cll_traverse(CircularLinkedList* list) {
+    if (!list-&gt;head) return;
+    CNode* temp = list-&gt;head;
+    do {
+        printf(&quot;%d -&gt; &quot;, temp-&gt;data);
+        temp = temp-&gt;next;
+    } while (temp != list-&gt;head);
+    printf(&quot;(back to head)\n&quot;);
+}
+
+int main() {
+    printf(&quot;=== Doubly Linked List ===\n&quot;);
+    DoublyLinkedList dll;
+    dll_init(&amp;dll);
+    dll_insert(&amp;dll, 10);
+    dll_insert(&amp;dll, 20);
+    dll_insert(&amp;dll, 30);
+    dll_traverse_forward(&amp;dll);
+    dll_delete(&amp;dll, 20);
+    dll_traverse_forward(&amp;dll);
+    dll_traverse_backward(&amp;dll);
+
+    printf(&quot;\n=== Circular Linked List ===\n&quot;);
+    CircularLinkedList cll;
+    cll_init(&amp;cll);
+    cll_insert(&amp;cll, 1);
+    cll_insert(&amp;cll, 2);
+    cll_insert(&amp;cll, 3);
+    cll_traverse(&amp;cll);
+    cll_delete(&amp;cll, 2);
+    cll_traverse(&amp;cll);
+
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>=== Doubly Linked List ===
+10 &lt;-&gt; 20 &lt;-&gt; 30 &lt;-&gt; NULL
+10 &lt;-&gt; 30 &lt;-&gt; NULL
+30 &lt;-&gt; 10 &lt;-&gt; NULL
+
+=== Circular Linked List ===
+1 -&gt; 2 -&gt; 3 -&gt; (back to head)
+1 -&gt; 3 -&gt; (back to head)</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>Successfully created and manipulated circular and doubly linked lists. Both data structures are dynamic and flexible alternatives to arrays for various use-cases</blockquote>
+</body>
+</html>

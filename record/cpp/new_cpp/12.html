@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 12</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 12</strong></h3>
+    <blockquote><em>C++ Programming</em></blockquote>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>Write a program in C++ to demonstrate dynamic memory allocation</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Dynamic allocation for single variable
+    int* ptr = new int(42);
+    cout &lt;&lt; &quot;Dynamically allocated integer: &quot; &lt;&lt; *ptr &lt;&lt; endl;
+    
+    // Dynamic allocation for array
+    int size;
+    cout &lt;&lt; &quot;Enter array size: &quot;;
+    cin &gt;&gt; size;
+    
+    int* arr = new int[size];
+    cout &lt;&lt; &quot;Enter &quot; &lt;&lt; size &lt;&lt; &quot; elements: &quot;;
+    for (int i = 0; i &lt; size; i++) {
+        cin &gt;&gt; arr[i];
+    }
+    
+    cout &lt;&lt; &quot;Array elements: &quot;;
+    for (int i = 0; i &lt; size; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; &quot; &quot;;
+    }
+    cout &lt;&lt; endl;
+    
+    // Dynamic allocation for 2D array
+    int rows = 3, cols = 3;
+    int** matrix = new int*[rows];
+    for (int i = 0; i &lt; rows; i++) {
+        matrix[i] = new int[cols];
+    }
+    
+    // Initialize matrix
+    int value = 1;
+    for (int i = 0; i &lt; rows; i++) {
+        for (int j = 0; j &lt; cols; j++) {
+            matrix[i][j] = value++;
+        }
+    }
+    
+    cout &lt;&lt; &quot;Dynamic 2D Array:&quot; &lt;&lt; endl;
+    for (int i = 0; i &lt; rows; i++) {
+        for (int j = 0; j &lt; cols; j++) {
+            cout &lt;&lt; matrix[i][j] &lt;&lt; &quot; &quot;;
+        }
+        cout &lt;&lt; endl;
+    }
+    
+    // Deallocate memory
+    delete ptr;
+    delete[] arr;
+    for (int i = 0; i &lt; rows; i++) {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
+    
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>Dynamically allocated integer: 42
+Enter array size: 4
+Enter 4 elements: 10 20 30 40
+Array elements: 10 20 30 40 
+Dynamic 2D Array:
+1 2 3 
+4 5 6 
+7 8 9</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>Dynamic memory allocation provides runtime flexibility for variable-sized data structures with proper memory management</blockquote>
+</body>
+</html>

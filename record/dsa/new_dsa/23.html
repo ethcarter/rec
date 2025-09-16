@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 23</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 23</strong></h3>
+    <blockquote><em>Sorting</em></blockquote>
+    <p><em>DSA</em></p>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>Implementation of merge sorting algorithm</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void merge(int arr[], int l, int m, int r) {
+    int n1 = m - l + 1;
+    int n2 = r - m;
+    
+    int* L = (int*)malloc(n1 * sizeof(int));
+    int* R = (int*)malloc(n2 * sizeof(int));
+    
+    for (int i = 0; i &lt; n1; i++)
+        L[i] = arr[l + i];
+    for (int j = 0; j &lt; n2; j++)
+        R[j] = arr[m + 1 + j];
+    
+    int i = 0, j = 0, k = l;
+    
+    while (i &lt; n1 &amp;&amp; j &lt; n2) {
+        if (L[i] &lt;= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+    
+    while (i &lt; n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+    
+    while (j &lt; n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+    
+    free(L);
+    free(R);
+}
+
+void mergeSort(int arr[], int l, int r) {
+    if (l &lt; r) {
+        int m = l + (r - l) / 2;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+}
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i &lt; size; i++)
+        printf(&quot;%d &quot;, arr[i]);
+    printf(&quot;\n&quot;);
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    printf(&quot;Original array: &quot;);
+    printArray(arr, n);
+    
+    mergeSort(arr, 0, n - 1);
+    
+    printf(&quot;Sorted array: &quot;);
+    printArray(arr, n);
+    
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>Original array: 12 11 13 5 6 7 
+Sorted array: 5 6 7 11 12 13</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>Merge sort efficiently divides array and merges sorted subarrays with O(n log n) time complexity</blockquote>
+</body>
+</html>

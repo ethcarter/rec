@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 29</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 29</strong></h3>
+    <blockquote><em>Graphs</em></blockquote>
+    <p><em>DSA</em></p>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>Mass storage structure using disk attachment algorithm</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct DiskNode {
+    int diskID;
+    int capacity;
+    struct DiskNode* next;
+};
+
+struct DiskArray {
+    struct DiskNode* head;
+    int totalDisks;
+};
+
+struct DiskNode* createDisk(int id, int capacity) {
+    struct DiskNode* newDisk = (struct DiskNode*)malloc(sizeof(struct DiskNode));
+    newDisk-&gt;diskID = id;
+    newDisk-&gt;capacity = capacity;
+    newDisk-&gt;next = NULL;
+    return newDisk;
+}
+
+void attachDisk(struct DiskArray* array, int id, int capacity) {
+    struct DiskNode* newDisk = createDisk(id, capacity);
+    if (array-&gt;head == NULL) {
+        array-&gt;head = newDisk;
+    } else {
+        struct DiskNode* temp = array-&gt;head;
+        while (temp-&gt;next != NULL) {
+            temp = temp-&gt;next;
+        }
+        temp-&gt;next = newDisk;
+    }
+    array-&gt;totalDisks++;
+    printf(&quot;Disk %d attached with %d GB capacity\n&quot;, id, capacity);
+}
+
+void displayDisks(struct DiskArray* array) {
+    struct DiskNode* temp = array-&gt;head;
+    printf(&quot;Attached Disks:\n&quot;);
+    while (temp != NULL) {
+        printf(&quot;Disk %d: %d GB\n&quot;, temp-&gt;diskID, temp-&gt;capacity);
+        temp = temp-&gt;next;
+    }
+    printf(&quot;Total Disks: %d\n&quot;, array-&gt;totalDisks);
+}
+
+int main() {
+    struct DiskArray diskArray = {NULL, 0};
+    
+    attachDisk(&amp;diskArray, 1, 500);
+    attachDisk(&amp;diskArray, 2, 1000);
+    attachDisk(&amp;diskArray, 3, 750);
+    
+    displayDisks(&amp;diskArray);
+    
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>Disk 1 attached with 500 GB capacity
+Disk 2 attached with 1000 GB capacity
+Disk 3 attached with 750 GB capacity
+Attached Disks:
+Disk 1: 500 GB
+Disk 2: 1000 GB
+Disk 3: 750 GB
+Total Disks: 3</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>Disk attachment algorithm efficiently manages dynamic addition of storage devices to the system</blockquote>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 22</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 22</strong></h3>
+    <blockquote><em>Sorting</em></blockquote>
+    <p><em>DSA</em></p>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>Implementation of insertion sorting algorithm</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+void insertionSort(int arr[], int n) {
+    for (int i = 1; i &lt; n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        
+        while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+void printArray(int arr[], int n) {
+    for (int i = 0; i &lt; n; i++) {
+        printf(&quot;%d &quot;, arr[i]);
+    }
+    printf(&quot;\n&quot;);
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    printf(&quot;Original array: &quot;);
+    printArray(arr, n);
+    
+    insertionSort(arr, n);
+    
+    printf(&quot;Sorted array: &quot;);
+    printArray(arr, n);
+    
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>Original array: 12 11 13 5 6 
+Sorted array: 5 6 11 12 13</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>Insertion sort builds sorted array one element at a time by inserting elements at correct positions</blockquote>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 05</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 05</strong></h3>
+    <blockquote><em>Linked Lists</em></blockquote>
+    <p><em>DSA</em></p>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>To implement traversal operation in singly linked list.</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+// Node structure
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Function to create a new node
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    if (newNode == NULL) {
+        printf(&quot;Memory allocation failed\n&quot;);
+        exit(1);
+    }
+    newNode-&gt;data = data;
+    newNode-&gt;next = NULL;
+    return newNode;
+}
+
+// Insert at the end of the list (for setup)
+void insertAtEnd(struct Node** head, int data) {
+    struct Node* newNode = createNode(data);
+    
+    if (*head == NULL) {
+        *head = newNode;
+        return;
+    }
+    
+    struct Node* temp = *head;
+    while (temp-&gt;next != NULL) {
+        temp = temp-&gt;next;
+    }
+    
+    temp-&gt;next = newNode;
+}
+
+// Traverse and display the list elements
+void traverse(struct Node* head) {
+    printf(&quot;List elements: &quot;);
+    
+    struct Node* temp = head;
+    while (temp != NULL) {
+        printf(&quot;%d&quot;, temp-&gt;data);
+        if (temp-&gt;next != NULL) {
+            printf(&quot; -&gt; &quot;);
+        }
+        temp = temp-&gt;next;
+    }
+    
+    printf(&quot; -&gt; NULL\n&quot;);
+}
+
+int main() {
+    struct Node* head = NULL;
+    
+    // Setup the list
+    insertAtEnd(&amp;head, 10);
+    insertAtEnd(&amp;head, 20);
+    insertAtEnd(&amp;head, 30);
+    insertAtEnd(&amp;head, 40);
+    insertAtEnd(&amp;head, 50);
+    
+    // Demonstrating traversal
+    traverse(head);
+    
+    // Free allocated memory
+    struct Node *current = head, *next;
+    while (current != NULL) {
+        next = current-&gt;next;
+        free(current);
+        current = next;
+    }
+    
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>List elements: 10 -&gt; 20 -&gt; 30 -&gt; 40 -&gt; 50 -&gt; NULL</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>Successfully implemented traversal operation in singly linked list</blockquote>
+</body>
+</html>

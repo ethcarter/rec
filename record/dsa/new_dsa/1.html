@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 01</title>
+</head>
+<body>
+    <h3><strong>EXPERIMENT 01</strong></h3>
+    <blockquote><em>Introduction to Data Structures</em></blockquote>
+    <p><em>DSA</em></p>
+    <hr>
+    <hr>
+    <h4><strong>Aim of the experiment:</strong></h4>
+    <blockquote>To write a program to analyze the concept and importance of data structures</blockquote>
+    <hr>
+    <h4><strong>Program:</strong></h4>
+    <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[10], n = 5;
+
+    // Initial Insertion
+    printf(&quot;Inserting elements...\n&quot;);
+    for (int i = 0; i &lt; n; i++) {
+        arr[i] = (i + 1) * 10; // 10, 20, 30, 40, 50
+    }
+
+    // Traversal
+    printf(&quot;Array elements: &quot;);
+    for (int i = 0; i &lt; n; i++) printf(&quot;%d &quot;, arr[i]);
+    printf(&quot;\n&quot;);
+
+    // Searching
+    int key = 30, found = -1;
+    for (int i = 0; i &lt; n; i++) {
+        if (arr[i] == key) {
+            found = i;
+            break;
+        }
+    }
+    if (found != -1) printf(&quot;Element %d found at index %d\n&quot;, key, found);
+    else printf(&quot;Element not found\n&quot;);
+
+    // Deletion
+    int del = 20;
+    for (int i = 0; i &lt; n; i++) {
+        if (arr[i] == del) {
+            for (int j = i; j &lt; n - 1; j++) arr[j] = arr[j + 1];
+            n--; // reduce size
+            break;
+        }
+    }
+
+    // Traversal after deletion
+    printf(&quot;Array after deleting %d: &quot;, del);
+    for (int i = 0; i &lt; n; i++) printf(&quot;%d &quot;, arr[i]);
+    printf(&quot;\n&quot;);
+
+    return 0;
+}</code></pre>
+    <hr>
+    <h4><strong>Sample Output:</strong></h4>
+    <pre><code>Inserting elements...
+Array elements: 10 20 30 40 50 
+Element 30 found at index 2
+Array after deleting 20: 10 30 40 50</code></pre>
+    <hr>
+    <h4><strong>Conclusion:</strong></h4>
+    <blockquote>Successfully analyxed the concept of data structure with basic array operations — insertion, traversal, searching, and deletion.</blockquote>
+</body>
+</html>
