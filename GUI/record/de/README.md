@@ -1,7 +1,7 @@
 ## **DE & CO Records**
 
 ### **Number Systems and Logic Gates**
-> To study and verify the truth table of **logic gates**: **AND, NAND, OR, NOR, NOT, XOR, X-NOR** <br> <br> [![exp_btn](https://img.shields.io/badge/Experiment_01-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](experiments/1.md)
+> To study and verify the truth table of **logic gates**: **AND, NAND, OR, NOR, NOT, XOR, X-NOR** <br> <br> [![exp_btn](https://img.shields.io/badge/Experiment_01-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](experiments/1.html)
 
 ---
 ---
