@@ -12,8 +12,8 @@
 
 ---
 
-> ***Checkout the [License](LICENSE) before performing any actions in this repository.***
+> ***Mind reading the [License](LICENSE) before performing any action(s) over this repository***
 
 ---
 
-<h4 align=center><b><i>Thank You</i></b></h4>
+<a href="https://github.com/dorukaysor/"><h4 align=center><b><i>Thank You</i></b></h4></a>
