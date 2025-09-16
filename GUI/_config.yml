@@ -32,8 +32,9 @@ author: "Ian Carter"
 twitter_username: iancarter-dev
 github_username: iancarter-dev
 
-# Theme settings (using default GitHub Pages theme)
-theme: minima
+# Theme settings (using GitHub Pages Jekyll themes)
+# theme: minima
+remote_theme: pages-themes/minimal
 
 # Additional metadata
 repository: "iancarter-dev/ambience"
