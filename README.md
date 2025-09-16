@@ -15,8 +15,8 @@
 
 > See [License](LICENSE) before performing any actions in this repository.
 
-<br>
-
 ---
+
+<br>
 
 <h4 align=center><b><i>Thank You</i></b></h4>
