@@ -33,7 +33,8 @@ github_username: iancarter-dev
 
 # Theme settings (using GitHub Pages Jekyll themes)
 # theme: minima
-remote_theme: pages-themes/hacker
+remote_theme: jekyll/jekyll
+theme: jekyll-theme-hacker
 
 # Additional metadata
 repository: "iancarter-dev/ambience"
