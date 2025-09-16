@@ -11,12 +11,9 @@
 > [![DE](https://img.shields.io/badge/DE_&_CO-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](record/de/README.md)
 
 ---
+
+> Checkout the [License](LICENSE) before performing any actions in this repository.
+
 ---
-
-> See [License](LICENSE) before performing any actions in this repository.
-
----
-
-<br>
 
 <h4 align=center><b><i>Thank You</i></b></h4>
