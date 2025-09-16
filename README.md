@@ -1,5 +1,5 @@
 ### **Syllabus**
-> [![syllabus](https://img.shields.io/badge/syllabus_pdf-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](https://1drv.ms/b/c/6ed555d35670d635/EfzQp5UNuwVDmqcOERqrDQ0BhGlU09B5Sg4PcQYUOoFdrQ?e=2HaGyz)
+> [![syllabus](https://img.shields.io/badge/syllabus_pdf-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](https://drive.google.com/file/d/1TkXEC0OsTR6gEvqS6mmKeS_UQyfeb1nP/view?usp=sharing)
 
 ---
 
