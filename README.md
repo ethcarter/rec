@@ -16,4 +16,8 @@
 
 ---
 
-<a href="https://github.com/dorukaysor/"><h4 align=center><b><i>Thank You</i></b></h4></a>
+<a href="https://github.com/dorukaysor">
+
+<h4 align=center><b><i>Thank You</i></b></h4>
+
+</a>
