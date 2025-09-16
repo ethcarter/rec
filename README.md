@@ -12,7 +12,7 @@
 
 ---
 
-> Checkout the [License](LICENSE) before performing any actions in this repository.
+> ***Checkout the [License](LICENSE) before performing any actions in this repository.***
 
 ---
 
