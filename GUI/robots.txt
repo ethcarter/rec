@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://iancarter-dev.github.io/ambience/GUI/sitemap.xml
+
+# Allow indexing of educational content
+Allow: /record/
+Allow: /experiments/
+
+# Standard web crawling
+Crawl-delay: 1

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Electronics & Computer Organization Records - Ambience</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <style>
+        /* CSS Variables for Dark AMOLED Theme */
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-card: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #999999;
+            --accent-primary: #ff7139;
+            --accent-secondary: #ff8c5a;
+            --border-color: #333333;
+            --shadow: 0 4px 20px rgba(255, 113, 57, 0.1);
+            --gradient: linear-gradient(135deg, #ff7139, #ff8c5a);
+            --hover-bg: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-secondary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .breadcrumb {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .course-header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, rgba(255, 113, 57, 0.1), rgba(255, 140, 90, 0.05));
+            border-radius: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .course-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .course-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--hover-bg);
+            transform: translateX(-5px);
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+            border-bottom: 2px solid var(--accent-primary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .experiments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .experiment-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experiment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient);
+        }
+
+        .experiment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .experiment-number {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .experiment-title {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .experiment-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--accent-primary);
+            color: var(--accent-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .experiment-btn:hover {
+            background: var(--accent-primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .coming-soon {
+            background: var(--bg-card);
+            border: 2px dashed var(--border-color);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .coming-soon .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .course-title {
+                font-size: 2rem;
+            }
+
+            .experiments-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .course-header {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .experiment-card, .coming-soon {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .experiment-card:nth-child(2n) { animation-delay: 0.1s; }
+        .experiment-card:nth-child(3n) { animation-delay: 0.2s; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">⚡ Digital Electronics & CO</div>
+            <div class="breadcrumb">
+                <a href="../../">Home</a> / <span>DE & CO Records</span>
+            </div>
+            <a href="../../" class="nav-btn">← Back to Home</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../" class="back-btn">
+            ← Back to Course List
+        </a>
+
+        <section class="course-header">
+            <div class="course-icon">⚡</div>
+            <h1 class="course-title">Digital Electronics & Computer Organization Records</h1>
+            <p class="course-description">
+                Comprehensive study of digital logic gates, combinational and sequential circuits, number systems, 
+                computer organization concepts, and digital system design principles with practical implementations.
+            </p>
+        </section>
+
+        <!-- Number Systems and Logic Gates -->
+        <section class="section">
+            <h2 class="section-title">🔢 Number Systems and Logic Gates</h2>
+            <p class="section-subtitle">Fundamental building blocks of digital systems and logic operations</p>
+            <div class="experiments-grid">
+                <div class="experiment-card">
+                    <div class="experiment-number">Experiment 01</div>
+                    <h3 class="experiment-title">
+                        To study and verify the truth table of logic gates: AND, NAND, OR, NOR, NOT, XOR, X-NOR
+                    </h3>
+                    <a href="experiments/1.html" class="experiment-btn">View Experiment</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Combinational Logic Circuits -->
+        <section class="section">
+            <h2 class="section-title">🔄 Combinational Logic Circuits</h2>
+            <p class="section-subtitle">Circuits that combine multiple logic gates to perform arithmetic and logical operations</p>
+            <div class="experiments-grid">
+                <div class="experiment-card">
+                    <div class="experiment-number">Experiment 02</div>
+                    <h3 class="experiment-title">
+                        To study and verify the truth table of half-adder and full-adder
+                    </h3>
+                    <a href="experiments/2.html" class="experiment-btn">View Experiment</a>
+                </div>
+
+                <div class="experiment-card">
+                    <div class="experiment-number">Experiment 03</div>
+                    <h3 class="experiment-title">
+                        To study and verify the truth table of half-subtractor and full-subtractor
+                    </h3>
+                    <a href="experiments/3.html" class="experiment-btn">View Experiment</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sequential Logic Circuits -->
+        <section class="section">
+            <h2 class="section-title">📋 Sequential Logic Circuits</h2>
+            <p class="section-subtitle">Memory elements and state-dependent circuits</p>
+            <div class="experiments-grid">
+                <div class="experiment-card">
+                    <div class="experiment-number">Experiment 04</div>
+                    <h3 class="experiment-title">
+                        To study and implement flip-flops (SR, JK, D, T flip-flops)
+                    </h3>
+                    <a href="experiments/4.html" class="experiment-btn">View Experiment</a>
+                </div>
+
+                <div class="experiment-card">
+                    <div class="experiment-number">Experiment 05</div>
+                    <h3 class="experiment-title">
+                        To design and implement counters (up, down, and modulo counters)
+                    </h3>
+                    <a href="experiments/5.html" class="experiment-btn">View Experiment</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming Soon Sections -->
+        <section class="section">
+            <h2 class="section-title">⏰ Timing and Clock Circuits</h2>
+            <div class="coming-soon">
+                <div class="icon">🚧</div>
+                <h3>Coming Soon</h3>
+                <p>Experiments on timing circuits, clock generation, and synchronization will be added soon.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">💾 Memory and Programmable Logic Devices</h2>
+            <div class="coming-soon">
+                <div class="icon">🚧</div>
+                <h3>Coming Soon</h3>
+                <p>Experiments on RAM, ROM, PLA, PAL, and FPGA implementations will be added soon.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">🔧 Digital Logic Applications</h2>
+            <div class="coming-soon">
+                <div class="icon">🚧</div>
+                <h3>Coming Soon</h3>
+                <p>Real-world applications of digital logic in computer organization and microprocessor design.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scrolling and animation effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add scroll animation observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all experiment cards and sections
+            document.querySelectorAll('.experiment-card, .coming-soon, .section').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

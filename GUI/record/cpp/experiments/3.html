@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 03: Expression Evaluation and Precedence - Ambience</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <style>
+        /* CSS Variables for Dark AMOLED Theme */
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-card: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #999999;
+            --accent-primary: #ff7139;
+            --accent-secondary: #ff8c5a;
+            --border-color: #333333;
+            --shadow: 0 4px 20px rgba(255, 113, 57, 0.1);
+            --gradient: linear-gradient(135deg, #ff7139, #ff8c5a);
+            --hover-bg: #1a1a1a;
+            --code-bg: #1a1a1a;
+            --code-border: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-secondary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .breadcrumb {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .experiment-header {
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, rgba(255, 113, 57, 0.1), rgba(255, 140, 90, 0.05));
+            border-radius: 15px;
+        }
+
+        .experiment-number {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .experiment-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .experiment-subject {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--hover-bg);
+            transform: translateX(-5px);
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            gap: 1rem;
+        }
+
+        .nav-experiment {
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-experiment:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        .nav-experiment.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .section-content strong {
+            color: var(--text-primary);
+        }
+
+        /* Code Blocks */
+        .code-container {
+            background: var(--code-bg);
+            border: 1px solid var(--code-border);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .code-header {
+            background: var(--bg-secondary);
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--code-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .code-language {
+            color: var(--accent-primary);
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .copy-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            color: white;
+        }
+
+        pre {
+            margin: 0;
+            padding: 1.5rem;
+            overflow-x: auto;
+            background: var(--code-bg);
+        }
+
+        code {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Override Prism theme for dark mode */
+        .token.comment { color: #6a9955; }
+        .token.keyword { color: #569cd6; }
+        .token.string { color: #ce9178; }
+        .token.number { color: #b5cea8; }
+        .token.operator { color: #d4d4d4; }
+        .token.punctuation { color: #d4d4d4; }
+        .token.function { color: #dcdcaa; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .experiment-title {
+                font-size: 1.5rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+            }
+
+            pre {
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .section:nth-child(2n) { animation-delay: 0.1s; }
+        .section:nth-child(3n) { animation-delay: 0.2s; }
+        .section:nth-child(4n) { animation-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">💻 Experiment 03</div>
+            <div class="breadcrumb">
+                <a href="../../../">Home</a> / 
+                <a href="../">C++ Programming</a> / 
+                <span>Experiment 03</span>
+            </div>
+            <a href="../" class="nav-btn">← Back to Course</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../" class="back-btn">
+            ← Back to C++ Programming
+        </a>
+
+        <section class="experiment-header">
+            <div class="experiment-number">Experiment 03</div>
+            <h1 class="experiment-title">Expression Evaluation and Precedence</h1>
+            <p class="experiment-subject">C++ Programming</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">
+                🎯 Aim of the Experiment
+            </h2>
+            <div class="section-content">
+                <p>Write a program using C++ expression evaluation and precedence</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">
+                💻 Program
+            </h2>
+            <div class="section-content">
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-language">C++</span>
+                        <button class="copy-btn" onclick="copyCode('code1')">Copy</button>
+                    </div>
+                    <pre><code id="code1" class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    float radius, area;
+    cout &lt;&lt; "Enter radius of the circle: ";
+    cin &gt;&gt; radius;
+
+    // Expression evaluation with precedence
+    // Multiplication has higher precedence than assignment
+    area = 3.14 * radius * radius;
+    
+    cout &lt;&lt; "Area of the circle = " &lt;&lt; area &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">
+                📋 Sample Output
+            </h2>
+            <div class="section-content">
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-language">Output</span>
+                        <button class="copy-btn" onclick="copyCode('output1')">Copy</button>
+                    </div>
+                    <pre><code id="output1">Enter radius of the circle: 5
+Area of the circle = 78.5</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">
+                📚 Key Concepts Demonstrated
+            </h2>
+            <div class="section-content">
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li><strong>Expression Evaluation:</strong> Mathematical calculation using multiple operators</li>
+                    <li><strong>Operator Precedence:</strong> Multiplication (*) evaluated before assignment (=)</li>
+                    <li><strong>Left-to-Right Associativity:</strong> Multiple multiplications evaluated left to right</li>
+                    <li><strong>Data Type Conversion:</strong> Implicit conversion between int and float</li>
+                    <li><strong>Mathematical Formula:</strong> Implementation of area = π × r² formula</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">
+                ✅ Conclusion
+            </h2>
+            <div class="section-content">
+                <p>Successfully implemented a program to calculate the area of a circle using C++ expression evaluation and operator precedence. The program demonstrates how operators are evaluated in the correct order according to their precedence rules.</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="2.html" class="nav-experiment">← Previous Experiment</a>
+            <a href="4.html" class="nav-experiment">Next Experiment →</a>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    
+    <script>
+        // Copy code functionality
+        function copyCode(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const text = codeElement.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                // Show feedback
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.background = 'var(--accent-primary)';
+                button.style.color = 'white';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = 'transparent';
+                    button.style.color = 'var(--text-secondary)';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        // Smooth scrolling for navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add scroll animation observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('.section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
