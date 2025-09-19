@@ -10,6 +10,8 @@
 
 > [![DE](https://img.shields.io/badge/DE_&_CO-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](record/de/README.md)
 
+> [![IOT](https://img.shields.io/badge/IOT-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](record/iot/README.md)
+
 ---
 
 > ***Mind reading the [License](LICENSE) before performing any action(s) over this repository***
