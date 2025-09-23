@@ -19,9 +19,6 @@
 
 > [![IOT](https://img.shields.io/badge/IOT-%23000000.svg?style=for-the-badge&logo=CircuitVerse&logoColor=FF7139)](record/iot/README.md)
 
-## 📦 **Internal Assesment Files:**
-> [![IA](https://img.shields.io/badge/IA_Files-%23000000.svg?style=for-the-badge&logo=bookstack&logoColor=FF7139)](ia/README.md)
-
 <br>
 
 ---
