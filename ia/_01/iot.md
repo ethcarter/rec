@@ -1,5 +1,3 @@
-# Internet of Things (IoT) - Questions and Answers
-
 ## Short Questions (1-2 marks each)
 
 ### 1. What is IoT?
