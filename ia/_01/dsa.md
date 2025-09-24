@@ -35,21 +35,23 @@
 
 **Push Algorithm:**
 ```
-1. Check if stack is full (top == MAX-1)
-2. If full, print "Stack Overflow"
-3. Else:
-   - Increment top (top = top + 1)
-   - Insert element (stack[top] = element)
+PUSH(STACK, element, TOP)
+1. TOP == MAX-1, print "Overflow"
+2. Else:
+   - Set TOP = TOP + 1
+   - Set STACK[TOP] = element
+3. Exit
 ```
 
 **Pop Algorithm:**
 ```
-1. Check if stack is empty (top == -1)
-2. If empty, print "Stack Underflow"
-3. Else:
-   - Store top element (element = stack[top])
-   - Decrement top (top = top - 1)
-   - Return element
+POP(STACK, element, TOP)
+1. TOP == -1, print "Underflow"
+2. Else:
+   - Set element = STACK[TOP]
+   - Set TOP = TOP - 1
+3. Return element
+4. Exit
 ```
 
 ### 4. Infix to postfix conversion with one example
@@ -78,22 +80,23 @@
 
 **Insertion (Enqueue) Algorithm:**
 ```
-1. Check if queue is full (rear == MAX-1)
-2. If full, print "Queue Overflow"
-3. Else:
-   - If queue is empty, set front = 0
-   - Increment rear (rear = rear + 1)
-   - Insert element (queue[rear] = element)
+enQueue(Q, N, FRONT, REAR, element)
+1. If FRONT = 1, REAR = 1, FRONT = REAR + 1, print "Overflow"
+2. If FRONT=NULL, Then FRONT = 1, REAR = 1
+   Else if, REAR = N, then Set REAR = 1
+   Else, Set Q[REAR] = element
+4. Return
+5. Exit
 ```
 
 **Deletion (Dequeue) Algorithm:**
 ```
-1. Check if queue is empty (front == -1 or front > rear)
-2. If empty, print "Queue Underflow"
-3. Else:
-   - Store front element (element = queue[front])
-   - Increment front (front = front + 1)
-   - Return element
+deQueue(Q, N, FRONT, REAR, element)
+1. If FRONT = NULL, print "Underflow"
+2. Set element = Q[FRONT]
+3. If FRONT = REAR, Then FRONT = NULL, REAR = NULL
+   Else if FRONT = N, Set FRONT = 1
+   Else, FRONT = FRONT + 1
 ```
 
 ### 6. Explain linked list representation and operation of stack
@@ -107,53 +110,23 @@
 
 **Push:**
 ```
-1. Create new node
-2. Set newNode.data = element
-3. Set newNode.next = top
-4. Set top = newNode
+1. Allocate memory and name it as "newNode"
+2. Set newNode->data = element
+3. If TOP = NULL
+   - Set newNode->next = TOP
+   - Set TOP = newNode
+   [end of if]
+4. Exit
 ```
 
 **Pop:**
 ```
-1. Check if top == NULL (empty stack)
-2. If empty, return error
-3. Else:
-   - Store top.data
-   - Set temp = top
-   - Set top = top.next
-   - Delete temp
-   - Return stored data
-```
-
-### 7. Explain linked list representation and operation of queue
-
-**Representation:**
-- Front pointer points to first node
-- Rear pointer points to last node
-- Nodes connected through next pointers
-
-**Operations:**
-
-**Enqueue:**
-```
-1. Create new node
-2. Set newNode.data = element
-3. Set newNode.next = NULL
-4. If queue empty, set front = rear = newNode
-5. Else, set rear.next = newNode, rear = newNode
-```
-
-**Dequeue:**
-```
-1. Check if front == NULL (empty queue)
-2. If empty, return error
-3. Else:
-   - Store front.data
-   - Set temp = front
-   - Set front = front.next
-   - If front == NULL, set rear = NULL
-   - Delete temp
-   - Return stored data
+1. If TOP == NULL, print "Underflow"
+2. Else:
+   - Set PTR = TOP
+   - Set TOP = TOP->next
+   - Free PTR
+3. Exit
 ```
 
 ### 8. Write algorithm to insert/delete an element at the beginning of linked list
@@ -161,8 +134,8 @@
 **Insertion at Beginning:**
 ```
 1. Create new node
-2. Set newNode.data = element
-3. Set newNode.next = head
+2. Set newNode->data = element
+3. Set newNode->next = head
 4. Set head = newNode
 ```
 
@@ -172,7 +145,7 @@
 2. If empty, return error
 3. Else:
    - Set temp = head
-   - Set head = head.next
+   - Set head = head->next
    - Delete temp
 ```
 
@@ -181,12 +154,12 @@
 **Insertion at End:**
 ```
 1. Create new node
-2. Set newNode.data = element
-3. Set newNode.next = NULL
+2. Set newNode->data = element
+3. Set newNode->next = NULL
 4. If head == NULL, set head = newNode
 5. Else:
-   - Traverse to last node (temp.next == NULL)
-   - Set temp.next = newNode
+   - Traverse to last node (temp->next == NULL)
+   - Set temp->next = newNode
 ```
 
 **Deletion from End:**
@@ -197,7 +170,7 @@
 4. Else:
    - Traverse to second last node
    - Delete last node
-   - Set secondLast.next = NULL
+   - Set secondLast->next = NULL
 ```
 
 ## 2 Mark Questions
