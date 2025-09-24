@@ -1,338 +1,282 @@
-# DSA - Internal
+# DSA - IA-1 Solutions
 
----
+## 1 Mark Questions
 
-### **5 MARK QUESTIONS**
+### 1. Explain classification of data structure
 
-### **1. Explain classification of data structure.**
+**Data structures are classified into:**
 
-A data structure is a way of organizing and storing data in a computer so that it can be accessed and used efficiently. It refers to the logical or mathematical representation of data, as well as the implementation in a computer program.
+- **Primitive Data Structures:**
+  - Basic data types provided by programming languages
+  - Examples: int, float, char, boolean
 
-Data structures are broadly classified into two main categories based on their nature and the arrangement of elements:
+- **Non-Primitive Data Structures:**
+  - **Linear Data Structures:**
+    - Elements arranged in sequential manner
+    - Examples: Arrays, Linked Lists, Stacks, Queues
+  - **Non-Linear Data Structures:**
+    - Elements not arranged sequentially
+    - Examples: Trees, Graphs
 
-**A. Primitive Data Structures:**
-These are the fundamental data structures directly operated upon by machine-level instructions. They are the basic building blocks.
+### 2. What are the operations of data structure? Explain in brief
 
-- **Examples:**
-    - **Integer:** Represents whole numbers (e.g., `int a = 10;`).
-    - **Float:** Represents floating-point numbers or decimals (e.g., `float b = 10.5;`).
-    - **Character:** Represents a single alphabet or symbol (e.g., `char c = 'A';`).
-    - **Boolean:** Represents a logical value, either `true` or `false`.
-    
+**Basic Operations:**
 
-**B. Non-Primitive Data Structures:**
-These are more complex data structures derived from primitive data structures. They are designed for organizing and managing large sets of data efficiently. 
+- **Insertion:** Adding new element to data structure
+- **Deletion:** Removing existing element from data structure
+- **Traversal:** Accessing each element exactly once
+- **Searching:** Finding location of element with given value
+- **Sorting:** Arranging elements in ascending/descending order
+- **Merging:** Combining two similar data structures
 
-They are further classified based on the arrangement of elements:
+### 3. Define stack. Write push and pop algorithms
 
-1. **Linear Data Structures:** In these structures, data elements are arranged in a sequential or linear order, where each element is connected to its previous and next element. The arrangement is one-dimensional.
-    - **Examples:**
-        - **Arrays:** A collection of elements of the same data type, stored in contiguous memory locations. Elements are accessed using an index.
-        - **Linked Lists:** A collection of elements called "nodes," where each node contains data and a pointer/reference to the next node in the sequence. Memory locations are not necessarily contiguous.
-        - **Stacks:** A linear structure that follows the **LIFO (Last-In, First-Out)** principle. Elements can only be added or removed from one end, called the "top."
-        - **Queues:** A linear structure that follows the **FIFO (First-In, First-Out)** principle. Elements are added at the "rear" and removed from the "front."
-2. **Non-Linear Data Structures:** In these structures, data elements are not arranged in a sequential manner. An element can be connected to more than one element, forming a hierarchical or multi-level structure.
-    - **Examples:**
-        - **Trees:** A hierarchical data structure consisting of nodes connected by edges. The topmost node is called the "root," and each node can have multiple children.
-        - **Graphs:** A collection of nodes (or vertices) connected by edges. Unlike trees, graphs have no defined root and can form cycles (a node can be connected back to itself via a path).
+**Stack:** Linear data structure following LIFO (Last In First Out) principle
 
-### **Based on Memory Allocation**
-
-- **Static Data Structures:** Their size and memory allocation are fixed at compile time. They cannot be easily resized during program execution.
-    - *Example:* **Array.** You must declare its size beforehand.
-- **Dynamic Data Structures:** Their size is not fixed and can change during program execution. They utilize memory more efficiently as they grow and shrink on demand.
-    - *Examples:* **Linked Lists, Trees, Graphs.** These are implemented using pointers.
-
-### **2. What are the operations of data structure, explain in brief.**
-
-Common operations performed on data structures include:
-
-- **Traversal:** Accessing each element of the data structure exactly once for processing.
-- **Insertion:** Adding a new element to the data structure at
-    - the beginning
-    - the end
-    - a desired location
-- **Deletion:** Removing an existing element from the data structure.
-- **Searching:** Finding the location of a given element within the data structure.
-    - 2 ways - Linear and Binary
-- **Sorting:** Arranging the elements of the data structure in a specific order (ascending/descending).
-    - Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, and Heap Sort
-- **Merging:** Combining two similar data structures into a single one.
-- **Copying:** Creating a duplicate of the data structure.
-
-### **3. Define stack and write push and pop algorithm.**
-
-**Definition:** A stack is a linear data structure that follows the **LIFO (Last-In, First-Out)** principle. The element inserted last is the first one to be removed. Insertion and deletion occur only at one end, called the **top**.
-
-**Push Algorithm (to insert an item):**
-
-1. **Check for Overflow**:
-    
-    If the stack is full (`top = max_size - 1`), print an overflow error and exit.
-    
-2. **Increment Top Pointer**:
-    
-    Increase `top` by 1.
-    
-3. **Insert Element**:
-    
-    Place the new element at `stack[top]`.
-    
-
+**Push Algorithm:**
 ```
-procedure push(stack, element)
-    if top = max_size - 1 then
-        print "Stack Overflow"
-        return
-    else
-        top ← top + 1
-        stack[top] ← element
-    end if
-end procedure
+1. Check if stack is full (top == MAX-1)
+2. If full, print "Stack Overflow"
+3. Else:
+   - Increment top (top = top + 1)
+   - Insert element (stack[top] = element)
 ```
 
-**Pop Algorithm (to delete an item):**
-
-1. **Check for Underflow**:
-    
-    If the stack is empty (`top = -1`), print an underflow error and exit.
-    
-2. **Retrieve Top Element**:
-    
-    Store `stack[top]` in a variable (optional, if returning the value).
-    
-3. **Decrement Top Pointer**:
-    
-    Decrease `top` by 1.
-    
-
+**Pop Algorithm:**
 ```
-procedure pop(stack)
-    if top = -1 then
-        print "Stack Underflow"
-        return null
-    else
-        element ← stack[top]
-        top ← top - 1
-        return element
-    end if
-end procedure
+1. Check if stack is empty (top == -1)
+2. If empty, print "Stack Underflow"
+3. Else:
+   - Store top element (element = stack[top])
+   - Decrement top (top = top - 1)
+   - Return element
 ```
 
-### **4. Infix to Postfix conversion one example.**
+### 4. Infix to postfix conversion with one example
 
-Let's convert the infix expression: `A + B * (C - D) / E` to postfix.
+**Rules:**
+- Scan infix expression left to right
+- If operand, add to output
+- If operator, pop operators with higher/equal precedence, then push current operator
+- If '(', push to stack
+- If ')', pop until '(' is found
 
-**Example Conversion**:
+**Example:** `A + B * C`
 
-Infix: `A + B * (C - D) / E`
+| Symbol | Stack | Output |
+|--------|-------|---------|
+| A      | -     | A       |
+| +      | +     | A       |
+| B      | +     | AB      |
+| *      | +*    | AB      |
+| C      | +*    | ABC     |
+| End    | -     | ABC*+   |
 
-| Symbol | Stack | Postfix Output | Explanation |
-| --- | --- | --- | --- |
-| A | empty | A | Operand, add to output |
-| + | + | A | Operator, push to stack |
-| B | + | A B | Operand, add to output |
-| * | +, * | A B | Higher precedence than +, push to stack |
-| ( | +, *, ( | A B | Left parenthesis, push to stack |
-| C | +, *, ( | A B C | Operand, add to output |
-| - | +, *, (, - | A B C | Operator inside parenthesis, push to stack |
-| D | +, *, (, - | A B C D | Operand, add to output |
-| ) | +, * | A B C D - | Right parenthesis, pop until matching ( |
-| / | +, / | A B C D - * | Pop * (same precedence), push / |
-| E | +, / | A B C D - * E | Operand, add to output |
-| End | empty | A B C D - * E / + | Pop remaining operators |
+**Result:** `ABC*+`
 
-Final Postfix Expression: `A B C D - * E / +`
+### 5. Write insertion and deletion algorithm for an item in queue
 
-### **5. Write insertion and deletion algorithm of an item in Queue.**
-
-**Definition:** A queue is a linear data structure that follows the **FIFO (First-In, First-Out)** principle.
-
-1. Check if the queue is full (i.e., `rear == capacity - 1`).
-2. If full, display an overflow error and exit.
-3. If not full:
-    - Increment `rear` by 1.
-    - Insert the new item at the `rear` position.
-4. If the queue was initially empty (`front == -1`), set `front = 0`.
-
+**Insertion (Enqueue) Algorithm:**
 ```
-Procedure enqueue(queue, item)
-  if rear == capacity - 1 then
-    print "Queue Overflow"
-    return
-  else
-    rear ← rear + 1
-    queue[rear] ← item
-    if front == -1 then
-      front ← 0
-    end if
-  end if
-End Procedure
-
+1. Check if queue is full (rear == MAX-1)
+2. If full, print "Queue Overflow"
+3. Else:
+   - If queue is empty, set front = 0
+   - Increment rear (rear = rear + 1)
+   - Insert element (queue[rear] = element)
 ```
 
-**Deletion Algorithm (Dequeue):**
-
-1. Check if the queue is empty (i.e., `front == -1` or `front > rear`).
-2. If empty, display an underflow error and exit.
-3. If not empty:
-    - Remove the item at the `front` position.
-    - Increment `front` by 1.
-    - If the queue becomes empty after deletion (`front > rear`), reset `front` and `rear` to `1`.
-
+**Deletion (Dequeue) Algorithm:**
+```
+1. Check if queue is empty (front == -1 or front > rear)
+2. If empty, print "Queue Underflow"
+3. Else:
+   - Store front element (element = queue[front])
+   - Increment front (front = front + 1)
+   - Return element
 ```
 
-Procedure dequeue(queue)
-  if front == -1 or front > rear then
-    print "Queue Underflow"
-    return null
-  else
-    item ← queue[front]
-    front ← front + 1
-    if front > rear then
-      front ← -1
-      rear ← -1
-    end if
-    return item
-  end if
-End Procedure
-```
+### 6. Explain linked list representation and operation of stack
 
-### **6.** Explain Linked List Representation and Operation of Stack
-
-In a linked list representation of a stack, each element is a node containing:
-
-- `data`: The value of the element.
-- `next`: A pointer to the next node in the sequence.
-
-The `top` of the stack is maintained as a pointer to the first node (head) of the linked list.
+**Representation:**
+- Each node contains data and pointer to next node
+- Top pointer points to topmost node
+- Stack grows downward
 
 **Operations:**
 
-- **Push (Insert):**
-    1. Create a new node.
-    2. Set the `data` of the new node to the new item.
-    3. Set the `next` pointer of the new node to point to the current `top` node.
-    4. Update the `top` pointer to point to this new node.
-        
-        ```
-        Algorithm Push(top, data)
-        Begin
-         newNode ← createNode(data)
-         newNode.next ← top
-         top ← newNode
-        End
-        ```
-        
-- **Pop (Delete):**
-    1. Check if `top == NULL` (stack is empty). If yes, indicate underflow.
-    2. If not, store the current `top` node in a temporary pointer.
-    3. Update the `top` pointer to `top->next`.
-    4. `data` of the temporary node is the popped element.
-    5. Free the memory of the temporary node.
-        
-        ```
-        Algorithm Pop(top)
-        Begin
-         If top = NULL Then
-         Print "Stack Underflow"
-         Return null
-         End If
-         temp ← top
-         data ← temp.data
-         top ← top.next
-         Delete temp
-         Return data
-        End
-        ```
-        
-
-**Advantage:** The stack can grow and shrink dynamically without the risk of overflow (unless system memory is exhausted).
-
----
-
-### **2 MARK QUESTIONS**
-
-### **1. Circular Linked List**
-
-A circular linked list is a variation of a linked list where the last node points back to the first node, forming a circle. This structure has no end, and any node can be a starting point.
-
-**Example Structure**:
-
-```c
-class Node {
-    int data;
-    Node next;
-}
+**Push:**
+```
+1. Create new node
+2. Set newNode.data = element
+3. Set newNode.next = top
+4. Set top = newNode
 ```
 
-### **2. Doubly Linked List**
-
-A doubly linked list is a list in which each node contains three parts:
-
-1. A pointer to the previous node (`prev`).
-2. The `data`.
-3. A pointer to the next node (`next`).
-
-This allows traversal in both forward and backward directions, but requires more memory per node.
-
-**Example Structure**:
-
-```hcl
-class Node {
-    int data;
-    Node next;
-    Node prev;
-}
+**Pop:**
+```
+1. Check if top == NULL (empty stack)
+2. If empty, return error
+3. Else:
+   - Store top.data
+   - Set temp = top
+   - Set top = top.next
+   - Delete temp
+   - Return stored data
 ```
 
-### **3. Circular Queue**
+### 7. Explain linked list representation and operation of queue
 
-A circular queue is a linear data structure that follows the FIFO principle, and the last position is connected to the first position to make a circle. 
+**Representation:**
+- Front pointer points to first node
+- Rear pointer points to last node
+- Nodes connected through next pointers
 
-This allows efficient utilization of memory by reusing the empty spaces created after dequeue operations.
+**Operations:**
 
-### **4. Dequeue (Double Ended Queue)**
+**Enqueue:**
+```
+1. Create new node
+2. Set newNode.data = element
+3. Set newNode.next = NULL
+4. If queue empty, set front = rear = newNode
+5. Else, set rear.next = newNode, rear = newNode
+```
 
-A dequeue is a generalized queue that allows insertion and deletion of elements from both the front and the rear ends. It does not follow the strict FIFO rule. 
+**Dequeue:**
+```
+1. Check if front == NULL (empty queue)
+2. If empty, return error
+3. Else:
+   - Store front.data
+   - Set temp = front
+   - Set front = front.next
+   - If front == NULL, set rear = NULL
+   - Delete temp
+   - Return stored data
+```
 
-### **5. Differentiate between stack and queue**
+### 8. Write algorithm to insert/delete an element at the beginning of linked list
 
-| Characteristic | Stack | Queue |
-| --- | --- | --- |
+**Insertion at Beginning:**
+```
+1. Create new node
+2. Set newNode.data = element
+3. Set newNode.next = head
+4. Set head = newNode
+```
+
+**Deletion from Beginning:**
+```
+1. Check if head == NULL (empty list)
+2. If empty, return error
+3. Else:
+   - Set temp = head
+   - Set head = head.next
+   - Delete temp
+```
+
+### 9. Write algorithm to insert/delete an element at the end of the linked list
+
+**Insertion at End:**
+```
+1. Create new node
+2. Set newNode.data = element
+3. Set newNode.next = NULL
+4. If head == NULL, set head = newNode
+5. Else:
+   - Traverse to last node (temp.next == NULL)
+   - Set temp.next = newNode
+```
+
+**Deletion from End:**
+```
+1. Check if head == NULL (empty list)
+2. If empty, return error
+3. If only one node, delete head and set head = NULL
+4. Else:
+   - Traverse to second last node
+   - Delete last node
+   - Set secondLast.next = NULL
+```
+
+## 2 Mark Questions
+
+### 1. Define Circular Linked List
+- **Definition:** Linked list where last node points back to first node instead of NULL
+- **Characteristics:**
+  - Forms a circle/loop structure
+  - No NULL pointers except for empty list
+  - Can traverse entire list starting from any node
+  - Memory efficient for applications requiring cyclic access
+
+### 2. Define Doubly Linked List
+- **Definition:** Linked list where each node has two pointers - one to next node and one to previous node
+- **Structure:** `[prev|data|next]`
+- **Advantages:**
+  - Bidirectional traversal possible
+  - Easier insertion/deletion operations
+  - Can traverse backward from any node
+
+### 3. Define Circular Queue
+- **Definition:** Queue implementation where rear position wraps around to front when end of array is reached
+- **Characteristics:**
+  - Uses modular arithmetic: `(rear + 1) % MAX`
+  - Efficient memory utilization
+  - No memory wastage like simple queue
+  - Front and rear pointers move in circular fashion
+
+### 4. Define Dequeue (Double Ended Queue)
+- **Definition:** Linear data structure allowing insertion and deletion at both ends
+- **Types:**
+  - **Input Restricted:** Insertion at one end, deletion at both ends
+  - **Output Restricted:** Insertion at both ends, deletion at one end
+- **Operations:** Insert/delete at front and rear
+
+### 5. Define Algorithm
+- **Definition:** Step-by-step procedure to solve a problem or perform a task
+- **Characteristics:**
+  - **Finiteness:** Must terminate after finite steps
+  - **Definiteness:** Each step must be clearly defined
+  - **Input:** Zero or more inputs
+  - **Output:** One or more outputs
+  - **Effectiveness:** Steps must be basic and feasible
+
+## 5 Mark Questions
+
+### 1. Differentiate between Stack and Queue
+
+| **Aspect** | **Stack** | **Queue** |
+|------------|-----------|-----------|
 | **Principle** | LIFO (Last In First Out) | FIFO (First In First Out) |
-| **Insertion** | At one end (top) | At one end (rear) |
-| **Deletion** | From the same end as insertion (top) | From the opposite end of insertion (front) |
-| **Operations** | Push (insertion), Pop (deletion) | Enqueue (insertion), Dequeue (deletion) |
-| **Implementation** | Using arrays or linked lists | Using arrays, linked lists, or circular arrays |
-| **Access** | Only the top element is accessible | Only the front element is accessible for removal |
-| **Applications** | Function calls, expression evaluation, backtracking | Task scheduling, printer spooling, breadth-first search |
+| **Insertion** | At top only (Push) | At rear only (Enqueue) |
+| **Deletion** | From top only (Pop) | From front only (Dequeue) |
+| **Pointers** | One pointer (top) | Two pointers (front, rear) |
+| **Applications** | Function calls, expression evaluation, undo operations | Process scheduling, breadth-first search, print queue |
+| **Memory Access** | Restricted to one end | Restricted to both ends differently |
+| **Implementation** | Array or linked list | Array, linked list, or circular array |
 
-### 6. Primitive vs. Non-Primitive Data Structures
+### 2. Differentiate between Primitive and Non-Primitive Data Structures
 
-| Aspect | Primitive Data Structures | Non-Primitive Data Structures |
-| --- | --- | --- |
-| **Definition** | Basic data types directly supported by programming languages | Derived data structures created using primitive data types |
-| **Examples** | `int`, `float`, `char`, `double`, `boolean`, `pointer` | Arrays, Linked Lists, Stacks, Queues, Trees, Graphs |
-| **Memory Allocation** | Allocated on stack (usually) | Allocated on heap (usually) |
-| **Nature** | Pre-defined and built-in | User-defined and programmatically created |
-| **Operations** | Basic operations (arithmetic, comparison) | Complex operations (insertion, deletion, traversal) |
-| **Storage** | Store single values | Store collections of data |
-| **Implementation** | Directly implemented by compiler | Implemented using primitive data structures |
+| **Aspect** | **Primitive** | **Non-Primitive** |
+|------------|---------------|-------------------|
+| **Definition** | Basic data types provided by language | Complex data types derived from primitive types |
+| **Examples** | int, float, char, boolean, double | Arrays, structures, unions, pointers, linked lists |
+| **Memory** | Fixed size, directly stored | Variable size, may store references |
+| **Operations** | Basic arithmetic and logical operations | Complex operations like insertion, deletion, traversal |
+| **Declaration** | Simple declaration | Requires definition of structure |
+| **Storage** | Stored directly in memory location | May store address of actual data |
+| **Manipulation** | Direct manipulation possible | Requires specific algorithms for manipulation |
 
-### 7. Linear vs. Non-Linear Data Structures
+### 3. Differentiate between Linear and Non-Linear Data Structures
 
-| Aspect | Linear Data Structures | Non-Linear Data Structures |
-| --- | --- | --- |
-| **Definition** | Elements arranged in sequential order | Elements arranged in hierarchical or interconnected manner |
-| **Traversal** | Single linear path for traversal | Multiple paths possible for traversal |
-| **Memory Efficiency** | Generally more memory efficient | May require more memory due to pointers/references |
-| **Implementation Complexity** | Simpler to implement | More complex to implement |
-| **Access Time** | Predictable access time | Variable access time |
-| **Examples** | Arrays, Linked Lists, Stacks, Queues | Trees, Graphs, Heaps, Hash Tables |
-| **Use Cases** | Simple data storage, sequential processing | Complex relationships, hierarchical data |
-| **Element Relationship** | Each element has exactly one predecessor and one successor (except first and last) | Elements can have multiple predecessors and successors |
-
-### **8. Define algorithm**
-
-An algorithm is a **finite, step-by-step, unambiguous set of instructions** designed to solve a specific problem or perform a computation. It must have the following properties: Input, Output, Definiteness, Finiteness, and Effectiveness.
+| **Aspect** | **Linear** | **Non-Linear** |
+|------------|------------|----------------|
+| **Definition** | Elements arranged in sequential/linear order | Elements not arranged in sequential manner |
+| **Relationship** | Each element connects to exactly two neighbors (except first/last) | Each element can connect to multiple elements |
+| **Examples** | Arrays, linked lists, stacks, queues | Trees, graphs, heaps |
+| **Traversal** | Single way to traverse (sequential) | Multiple ways to traverse |
+| **Memory Utilization** | Memory may not be utilized efficiently | Better memory utilization |
+| **Implementation** | Easier to implement | More complex implementation |
+| **Time Complexity** | Generally linear for basic operations | Varies based on structure and operation |
+| **Applications** | Simple data organization, temporary storage | Hierarchical data, network representation, decision trees |
