@@ -5,9 +5,10 @@
 <details>
     <summary><b>⚠️ Note:</b></summary>
 
-*Before writing any program, please compile and run the code yourself. If any errors occur, feel free to report them in the issues section*
-
-*Comments are only written to understand a part of a program. In that case, if you do not understand a part of the program - youcan write comments only for that specific part*
+- *Before writing any program, please compile and run the code yourself.*  
+- *If any error occurs, feel free to report them*  
+- *Comments are only written to understand a part of a program. It is not a part of the program.*
+- *In case you do not understand a line, you can add comments*
 
 </details><br>
 
