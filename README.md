@@ -9,14 +9,6 @@
 [![DE](https://img.shields.io/badge/DE-%23000000.svg?style=for-the-badge&logo=polestar&logoColor=FF7139)](record/de/README.md)
 [![IOT](https://img.shields.io/badge/IOT-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](record/iot/README.md)
 
-## [![#assignments](https://img.shields.io/badge/ASSIGNMENTS-%23000000.svg?style=for-the-badge&logo=googlecampaignmanager360&logoColor=1E8E3E)](#assignments)
-
-[![C++](https://img.shields.io/badge/CPP-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](assign/cpp/)
-[![DSA](https://img.shields.io/badge/DSA-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](assign/dsa/)
-[![DE](https://img.shields.io/badge/DE-%23000000.svg?style=for-the-badge&logo=polestar&logoColor=FF7139)](assign/de/)
-[![IOT](https://img.shields.io/badge/IOT-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](assign/iot/)
-[![IST](https://img.shields.io/badge/IST-%23000000.svg?style=for-the-badge&logo=freenet&logoColor=FF7139)](assign/ist/)
-
 ---
 
 <details>
