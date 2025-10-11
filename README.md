@@ -1,15 +1,25 @@
-## [![#syllabus](https://img.shields.io/badge/syllabus-%23000000.svg?style=for-the-badge&logo=readthedocs&logoColor=1E8E3E)](#syllabus)
+ [![#syllabus](https://img.shields.io/badge/syllabus-%23000000.svg?style=for-the-badge&logo=readthedocs&logoColor=1E8E3E)](#syllabus)
 
-[![syllabus](https://img.shields.io/badge/syllabus_pdf-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](https://drive.google.com/file/d/1TkXEC0OsTR6gEvqS6mmKeS_UQyfeb1nP/view?usp=sharing)
+> [![syllabus](https://img.shields.io/badge/syllabus_pdf-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](https://drive.google.com/file/d/1TkXEC0OsTR6gEvqS6mmKeS_UQyfeb1nP/view?usp=sharing)
 
-## [![#records](https://img.shields.io/badge/Practical_Records-%23000000.svg?style=for-the-badge&logo=securityscorecard&logoColor=1E8E3E)](#records)
+<br>
 
-[![C++](https://img.shields.io/badge/CPP-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](record/cpp/README.md)
+---
+
+<br>
+
+[![#records](https://img.shields.io/badge/Practical_Records-%23000000.svg?style=for-the-badge&logo=securityscorecard&logoColor=1E8E3E)](#records)
+
+> [![C++](https://img.shields.io/badge/CPP-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](record/cpp/README.md)
 [![DSA](https://img.shields.io/badge/DSA-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](record/dsa/README.md)
 [![DE](https://img.shields.io/badge/DE-%23000000.svg?style=for-the-badge&logo=polestar&logoColor=FF7139)](record/de/README.md)
 [![IOT](https://img.shields.io/badge/IOT-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](record/iot/README.md)
 
+<br>
+
 ---
+
+<br>
 
 <details>
 <summary style="font-size: 1em; font-weight: bold; cursor: pointer; color: #ff0909d7;">⚠️ Important Notice</summary>
