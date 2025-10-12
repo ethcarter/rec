@@ -12,7 +12,7 @@
 > Write a program to make three LEDs blink in a sequence  
 [![exp_btn](https://img.shields.io/badge/Experiment_04-%23000000.svg?style=for-the-badge&logo=circuitverse&logoColor=FF7139)](experiments/4.md)
 
-> Write a program to  Write a program to display a message on the serial monitor  
+> Write a program to display a message on the serial monitor  
 [![exp_btn](https://img.shields.io/badge/Experiment_05-%23000000.svg?style=for-the-badge&logo=circuitverse&logoColor=FF7139)](experiments/5.md)
 
 > Write a program to return the user input through the serial monitor  
