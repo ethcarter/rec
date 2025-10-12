@@ -21,7 +21,7 @@ A number system is basically a way to represent quantities using specific symbol
 - **Addition**: Similar to decimal addition but with carry rules based on 2
   Example: 1101 + 1001 = 10110
   ```
-     1 1 1 (carries)
+     1 0 1 (carries)
      1 1 0 1
    + 1 0 0 1
    ---------
