@@ -1,12 +1,6 @@
 ## **DE & CO Records**
 
-### **Number Systems and Logic Gates**
 > To study and verify the truth table of **logic gates**: **AND, NAND, OR, NOR, NOT, XOR, X-NOR** <br> <br> [![exp_btn](https://img.shields.io/badge/Experiment_01-%23000000.svg?style=for-the-badge&logo=polestar&logoColor=FF7139)](experiments/1.md)
-
----
----
-
-### **Combinational Logic Circuits**
 
 > To study and verify the truth table of **half-adder** and **full-adder**  
 [![exp_btn](https://img.shields.io/badge/Experiment_02-%23000000.svg?style=for-the-badge&logo=polestar&logoColor=FF7139)](experiments/2.md)
@@ -17,26 +11,6 @@
 ---
 ---
 
-### **Sequential Logic Circuits**
-<br>
-
----
----
-
-### **Timing and Clock Circuits**
-<br>
-
----
----
-
-### **Memory and Programmable Logic Devices**
-<br>
-
----
----
-
-### **Digital Logic Applications**
-<br>
-
----
----
+> **Digital Electronic Records won't be updated further...**
+>
+> *Please ask **Annapurna** for the records*
