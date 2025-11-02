@@ -1,71 +1,44 @@
 ## **IOT Records**
 
-> Study of Arduino UNO micro-controller board <br>
-> <a class="exp-badge" href="experiments/1/">
-    <img alt="Experiment 01" src="badges/badge-1.svg" width="120" height="50" />
-</a>
+> Study of Arduino UNO micro-controller board   
+[![exp_btn](https://img.shields.io/badge/Experiment_01-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/1/)
 
-> Write a program to make an LED blink <br>
-> <a class="exp-badge" href="experiments/2/">
-    <img alt="Experiment 02" src="badges/badge-2.svg" width="120" height="50" />
-</a>
+> Write a program to make an LED blink  
+[![exp_btn](https://img.shields.io/badge/Experiment_02-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/2/)
 
-> Write a program to make an LED blink for a specific number of times <br>
-> <a class="exp-badge" href="experiments/3/">
-    <img alt="Experiment 03" src="badges/badge-3.svg" width="120" height="50" />
-</a>
+> Write a program to make an LED blink for a specific number of times  
+[![exp_btn](https://img.shields.io/badge/Experiment_03-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/3/)
 
-> Write a program to make three LEDs blink in a sequence <br>
-> <a class="exp-badge" href="experiments/4/">
-    <img alt="Experiment 04" src="badges/badge-4.svg" width="120" height="50" />
-</a>
+> Write a program to make three LEDs blink in a sequence  
+[![exp_btn](https://img.shields.io/badge/Experiment_04-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/4/)
 
-> Write a program to display a message on the serial monitor <br>
-> <a class="exp-badge" href="experiments/5/">
-    <img alt="Experiment 05" src="badges/badge-5.svg" width="120" height="50" />
-</a>
+> Write a program to display a message on the serial monitor  
+[![exp_btn](https://img.shields.io/badge/Experiment_05-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/5/)
 
-> Write a program to return the user input through the serial monitor <br>
-> <a class="exp-badge" href="experiments/6/">
-    <img alt="Experiment 06" src="badges/badge-6.svg" width="120" height="50" />
-</a>
+> Write a program to return the user input through the serial monitor  
+[![exp_btn](https://img.shields.io/badge/Experiment_06-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/6/)
 
-> Write a program to blink an LED when a button is pressed <br>
-> <a class="exp-badge" href="experiments/7/">
-    <img alt="Experiment 07" src="badges/badge-7.svg" width="120" height="50" />
-</a>
+> Write a program to blink an LED when a button is pressed  
+[![exp_btn](https://img.shields.io/badge/Experiment_07-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/7/)
 
-> Write a program that would count the no. of times to blink the LED according to the no. times the button is pressed <br>
-> <a class="exp-badge" href="experiments/8/">
-    <img alt="Experiment 08" src="badges/badge-8.svg" width="120" height="50" />
-</a>
+> Write a program that would count the no. of times to blink the LED according to the no. times the button is pressed  
+[![exp_btn](https://img.shields.io/badge/Experiment_08-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/8/)
 
-> Ambient Light Sensor Using Photo Resistor and LED Lights <br>
-> <a class="exp-badge" href="experiments/9/">
-    <img alt="Experiment 09" src="badges/badge-9.svg" width="120" height="50" />
-</a>
+> Ambient Light Sensor Using Photo Resistor and LED Lights  
+[![exp_btn](https://img.shields.io/badge/Experiment_09-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/9/)
 
-> Connecting LM35 Temperature Sensor with Arduino UNO <br>
-> <a class="exp-badge" href="experiments/10/">
-    <img alt="Experiment 10" src="badges/badge-10.svg" width="120" height="50" />
-</a>
+> Connecting LM35 Temperature Sensor with Arduino UNO  
+[![exp_btn](https://img.shields.io/badge/Experiment_10-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/10/)
 
-> Controlling Servo Motor using Potentiometer and Arduino <br>
-> <a class="exp-badge" href="experiments/11/">
-    <img alt="Experiment 11" src="badges/badge-11.svg" width="120" height="50" />
-</a>
+> Controlling Servo Motor using Potentiometer and Arduino  
+[![exp_btn](https://img.shields.io/badge/Experiment_11-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/11/)
 
-> Generating Sound using Piezo Buzzer with Arduino <br>
-> <a class="exp-badge" href="experiments/12/">
-    <img alt="Experiment 12" src="badges/badge-12.svg" width="120" height="50" />
-</a>
+> Generating Sound using Piezo Buzzer with Arduino  
+[![exp_btn](https://img.shields.io/badge/Experiment_12-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/12/)
 
-> Interfacing Relay Module with Arduino <br>
-> <a class="exp-badge" href="experiments/13/">
-    <img alt="Experiment 13" src="badges/badge-13.svg" width="120" height="50" />
-</a>
+> Interfacing Relay Module with Arduino  
+[![exp_btn](https://img.shields.io/badge/Experiment_13-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/13/)
 
-> [Add description for Experiment 14] <br>
-> <a class="exp-badge" href="experiments/14/">
-    <img alt="Experiment 14" src="badges/badge-14.svg" width="120" height="50" />
-</a>
+
+> Controlling Brightness of an LED using PWM  
+[![exp_btn](https://img.shields.io/badge/Experiment_14-%23000000.svg?style=for-the-badge&logo=arduino&logoColor=FF7139)](experiments/14/)
