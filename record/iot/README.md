@@ -23,3 +23,28 @@
 
 > Write a program that would count the no. of times to blink the LED according to the no. times the button is pressed  
 [![exp_btn](https://img.shields.io/badge/Experiment_08-%23000000.svg?style=for-the-badge&logo=circuitverse&logoColor=FF7139)](experiments/8.md)
+
+> Ambient Light Sensor Using Photo Resistor and LED Lights <br>
+> <a class="exp-badge" href="experiments/9.md">
+    <img src="badges/badge-9.svg" alt="Experiment 9" width="120" height="50" />
+</a>
+
+> Connecting LM35 Temperature Sensor with Arduino UNO <br>
+> <a class="exp-badge" href="badge/10.md">
+		<img alt="Experiment 10" src="badges/badge-10.svg" width="120" height="50" />
+</a>
+
+> Controlling Servo Motor using Potentiometer and Arduino <br>
+> <a class="exp-badge" href="badge/11.md">
+		<img alt="Experiment 11" src="badges/badge-11.svg" width="120" height="50" />
+</a>
+
+> Generating Sound using Piezo Buzzer with Arduino <br>
+> <a class="exp-badge" href="badge/12.md">
+		<img alt="Experiment 12" src="badges/badge-12.svg" width="120" height="50" />	
+</a>
+
+> Interfacing Relay Module with Arduino <br>
+> <a class="exp-badge" href="experiments/13.md">
+        <img alt="Experiment 13" src="badges/badge-13.svg" width="120" height="50" />  
+</a>
