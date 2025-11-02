@@ -38,14 +38,8 @@ void loop() {
 
 ---
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-	<div style="text-align: left;">
-		<a href="5.md" style="background: #333; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold;">Prev</a>
-	</div>
-	<div style="text-align: center;">
-		<a href="../" style="background: #333; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold;">🏠</a>
-	</div>
-	<div style="text-align: right;">
-		<a href="7.md" style="background: #333; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold;">Next</a>
-	</div>
+<div align="center">
+
+[![Previous](https://img.shields.io/badge/Previous-%23000000.svg?style=for-the-badge&logo=backbone&logoColor=1E8E3E)](../5/)  [![Home](https://img.shields.io/badge/Home-%23000000.svg?style=for-the-badge&logo=googlehome&logoColor=1E8E3E)](../../)  [![Next](https://img.shields.io/badge/Next-%23000000.svg?style=for-the-badge&logo=inertia&logoColor=1E8E3E)](../7/)
+
 </div>
