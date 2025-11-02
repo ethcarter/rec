@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="30" viewBox="0 0 110 35" role="img" aria-label="Experiment 9">
+  <rect x="2" y="2" width="100" height="30" rx="8" ry="8" fill="#000000" />
+  
+  <text x="50" y="20" text-anchor="middle" fill="#ebebebff" font-family="Bahnschrift, sans-serif" font-size="12" font-weight="bold">EXPERIMENT 10</text>
+  
+  <rect x="2" y="2" width="100" height="30" rx="8" ry="8"
+        fill="none" stroke="#FF7139" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="500" vector-effect="non-scaling-stroke">
+    <animate attributeName="stroke-dashoffset" values="0;-500;500;0;0;250" dur="5s" repeatCount="indefinite" begin="0s" />
+  </rect>
+</svg>
