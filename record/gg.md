@@ -1,7 +1,7 @@
 ## **Question 1: Answer all Questions (1*5=5)**
 
 ### **a. What do you mean by Instruction in Computer Organisation?**
-> An instruction is a basic command given to a computer processor to perform a specific operation. It consists of an opcode (operation code) that specifies the operation to be performed and operands that indicate the data or memory locations to be used.
+ An instruction is a basic command given to a computer processor to perform a specific operation. It consists of an opcode (operation code) that specifies the operation to be performed and operands that indicate the data or memory locations to be used.
 
 ### **b. Differentiate between ROM and RAM.**
 
@@ -15,15 +15,15 @@
 
 ### **c. What is Virtual memory?**
 
-> Virtual memory is a memory management technique that creates an illusion of large main memory by using a portion of secondary storage (hard disk) as an extension of RAM. It allows execution of programs larger than physical memory by swapping data between RAM and disk.
+ Virtual memory is a memory management technique that creates an illusion of large main memory by using a portion of secondary storage (hard disk) as an extension of RAM. It allows execution of programs larger than physical memory by swapping data between RAM and disk.
 
 ### **d. What is microprocessor and microcontroller?**
 
-> A microprocessor is a general-purpose CPU that requires external components like memory and I/O devices to function as a complete system. A microcontroller is a compact integrated circuit containing a processor, memory, and I/O peripherals on a single chip, designed for specific control applications.
+ A microprocessor is a general-purpose CPU that requires external components like memory and I/O devices to function as a complete system. A microcontroller is a compact integrated circuit containing a processor, memory, and I/O peripherals on a single chip, designed for specific control applications.
 
 ### **e. What is Storage Device? Give two examples.**
 
-> A storage device is a hardware component used to store, retrieve, and preserve digital data permanently or temporarily. Examples: Hard Disk Drive (HDD) and Solid State Drive (SSD).
+ A storage device is a hardware component used to store, retrieve, and preserve digital data permanently or temporarily. Examples: Hard Disk Drive (HDD) and Solid State Drive (SSD).
 
 ---
 
