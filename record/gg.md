@@ -48,6 +48,7 @@ CPU  → [Address Bus (Unidirectional)] → Memory/I/O
 CPU ←→ [Control Bus (Bidirectional)] ←→ Memory/I/O
 ```
 <img src="bus.jpg" alt="System Architecture">
+
 ---
 
 ### **b. Define the term Instruction Cycle? Briefly explain its various stages with diagram.**
@@ -72,6 +73,7 @@ Fetch → Decode → Execute → Store
      (Repeat for next instruction)
 ```
 <img src="ins_cy.jpg" alt="instruction cycle">
+
 ---
 
 ### **c. What is Instruction Set? State and explain types of instruction.**
