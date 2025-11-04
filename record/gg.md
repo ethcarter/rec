@@ -1,131 +1,83 @@
-## **Question 1: Answer all Questions (1*5=5)**
+# Sensors & Transducers
 
-### **a. What do you mean by Instruction in Computer Organisation?**
- An instruction is a basic command given to a computer processor to perform a specific operation. It consists of an opcode (operation code) that specifies the operation to be performed and operands that indicate the data or memory locations to be used.
+## Principles (1 mark)
+Sensors detect physical quantities and convert them into measurable signals, while transducers convert one form of energy into another. They work on principles like resistive, capacitive, inductive, piezoelectric, thermoelectric, photoelectric, and electromagnetic effects to transform physical parameters into electrical signals.
 
-### **b. Differentiate between ROM and RAM.**
+## Classification (1 mark)
+Sensors are classified as: **Active** (self-generating, no external power) and **Passive** (require external power); **Analog** (continuous output) and **Digital** (discrete output); **Contact** and **Non-contact** types based on physical interaction with the measured quantity.
 
-| ROM | RAM |
-|-----|-----|
-| ROM stands for Read-Only Memory. | RAM stands for Random Access Memory. |
-| It's a non-volatile memory that retains data permanently even when power is off | It's a volatile memory that loses data when power is turned off  |
-| It is used to store firmware. | It is used for temporary storage of programs and data during processing. 
+## Characteristics - Static and Dynamic (5 marks)
 
-> ROM (Read-Only Memory) is non-volatile memory that retains data permanently even when power is off and is used to store firmware. RAM (Random Access Memory) is volatile memory that loses data when power is turned off and is used for temporary storage of programs and data during processing.
+**Static Characteristics:**
+- **Accuracy**: Closeness of measured value to true value
+- **Precision**: Repeatability of measurements under same conditions
+- **Sensitivity**: Ratio of output change to input change
+- **Resolution**: Smallest detectable input change
+- **Linearity**: Deviation from ideal straight-line response
+- **Hysteresis**: Difference in output for increasing and decreasing inputs
 
-### **c. What is Virtual memory?**
+**Dynamic Characteristics:**
+- **Fidelity**: Ability to reproduce input waveform without distortion in output
+- **Response Time**: Time taken to reach final steady value after input change (includes rise time, settling time)
+- **Time Constant**: Time to reach 63.2% of final value in first-order systems
+- **Frequency Response**: Sensor behavior over range of input frequencies
 
- Virtual memory is a memory management technique that creates an illusion of large main memory by using a portion of secondary storage (hard disk) as an extension of RAM. It allows execution of programs larger than physical memory by swapping data between RAM and disk.
+## PP (1-5) - Assuming Performance Parameters (5 marks)
+- **Span/Range**: Difference between maximum and minimum measurable values
+- **Threshold**: Minimum input required to produce detectable output change
+- **Drift**: Gradual change in output over time with constant input (temporal or thermal drift)
+- **Noise**: Random fluctuations in output signal affecting measurement quality
+- **Dead Band**: Range of input where no output change occurs
 
-### **d. What is microprocessor and microcontroller?**
+## Environmental Parameters (1 mark)
+Environmental parameters include temperature, humidity, pressure, light intensity, vibration, and electromagnetic interference that affect sensor operation. Sensors must be compensated or shielded against these external factors to maintain accuracy and reliability.
 
- A microprocessor is a general-purpose CPU that requires external components like memory and I/O devices to function as a complete system. A microcontroller is a compact integrated circuit containing a processor, memory, and I/O peripherals on a single chip, designed for specific control applications.
+## Electrical, Mechanical, Thermal Characterisation (5 marks)
 
-### **e. What is Storage Device? Give two examples.**
+**Electrical Characterisation:**
+- **Impedance**: Input/output resistance and capacitance affecting signal transfer
+- **Signal-to-Noise Ratio (SNR)**: Ratio of desired signal to background noise
+- **Power consumption**: Energy required for sensor operation
 
- A storage device is a hardware component used to store, retrieve, and preserve digital data permanently or temporarily. Examples: Hard Disk Drive (HDD) and Solid State Drive (SSD).
+**Mechanical Characterisation:**
+- **Robustness**: Ability to withstand mechanical stress, shock, and vibration
+- **Size and weight**: Physical dimensions affecting installation
+- **Mounting requirements**: Method and stability of sensor placement
 
----
+**Thermal Characterisation:**
+- **Operating temperature range**: Functional temperature limits
+- **Temperature coefficient**: Output variation per degree temperature change
+- **Thermal stability**: Ability to maintain performance across temperature variations
 
-## **Question 2: Answer any three of the following (3*5=15)**
+## Optical, Chemical, Biological (5 marks)
 
-### **a. What do you mean by Computer Bus? Briefly explain its types with diagram.**
+**Optical Sensors:**
+- Detect light intensity, wavelength, or phase changes using photodiodes, phototransistors, or CCDs
+- Applications: proximity detection, color sensing, fiber optic communications
+- Work on principles of absorption, reflection, refraction, or interference
 
-A computer bus is a communication pathway that transfers data between different components of a computer system. It consists of multiple parallel wires or traces on the motherboard.
+**Chemical Sensors:**
+- Detect specific chemical species or concentrations through reactions producing measurable signals
+- Types include pH sensors, gas sensors, ion-selective electrodes
+- Based on electrochemical, catalytic, or mass-sensitive transduction
 
-**Types of Computer Bus:**
+**Biological Sensors (Biosensors):**
+- Use biological recognition elements (enzymes, antibodies, DNA) to detect analytes
+- Convert biological response into electrical signal via transducer
+- Applications: glucose monitoring, DNA detection, pathogen identification
 
-- **Data Bus:** Carries actual data between processor, memory, and I/O devices. It is bidirectional and its width (8, 16, 32, 64 bits) determines data transfer capacity.
+## Structure of Metal Oxide Semiconductor (5 marks)
 
-- **Address Bus:** Carries memory addresses from processor to memory and I/O devices. It is unidirectional and its width determines maximum addressable memory.
+**Basic MOS Structure:**
+- **Metal Gate**: Top electrode (aluminum or polysilicon) for voltage application
+- **Oxide Layer**: Thin insulating silicon dioxide (SiO₂) layer between gate and semiconductor
+- **Semiconductor Substrate**: P-type or N-type silicon forming the base
 
-- **Control Bus:** Carries control signals like read, write, interrupt, and clock signals to coordinate operations. It is bidirectional and manages timing and control of operations.
+**Working Principle:**
+- Gate voltage creates electric field across oxide, modulating conductivity of semiconductor surface
+- Forms depletion, accumulation, or inversion layers depending on applied bias
+- **MOS sensors** detect changes in work function, surface charge, or capacitance when exposed to gases, light, or chemicals
 
-**Diagram:**
-```
-CPU ←→ [Data Bus (Bidirectional)] ←→ Memory/I/O
-CPU  → [Address Bus (Unidirectional)] → Memory/I/O
-CPU ←→ [Control Bus (Bidirectional)] ←→ Memory/I/O
-```
-<img src="bus.jpg" alt="System Architecture">
-
----
-
-### **b. Define the term Instruction Cycle? Briefly explain its various stages with diagram.**
-
-The instruction cycle is the basic operational process of a CPU where it fetches, decodes, and executes instructions sequentially from memory. It represents the complete sequence of steps required to process a single instruction.
-
-**Stages of Instruction Cycle:**
-
-- **Fetch:** CPU fetches the instruction from memory location pointed by Program Counter (PC) and loads it into Instruction Register (IR). PC is incremented to point to next instruction.
-
-- **Decode:** The control unit decodes the instruction in IR to determine the operation to be performed and identifies the operands required.
-
-- **Execute:** ALU performs the actual operation specified by the instruction using the operands. Results are stored in registers or memory.
-
-- **Store:** Results of execution are written back to memory or registers as specified by the instruction.
-
-**Diagram:**
-```
-Fetch → Decode → Execute → Store
-  ↑                          ↓
-  ←←←←←←←←←←←←←←←←←←←←←←←←←←←←
-     (Repeat for next instruction)
-```
-<img src="ins_cy.jpg" alt="instruction cycle">
-
----
-
-### **c. What is Instruction Set? State and explain types of instruction.**
-
-An instruction set is the complete collection of instructions that a processor can understand and execute. It defines the operations available to programmers and forms the interface between hardware and software.
-
-**Types of Instructions:**
-
-- **Data Transfer Instructions:** Move data between registers, memory, and I/O devices (e.g., LOAD, STORE, MOVE, PUSH, POP).
-
-- **Arithmetic Instructions:** Perform mathematical operations like addition, subtraction, multiplication, and division (e.g., ADD, SUB, MUL, DIV, INCREMENT, DECREMENT).
-
-- **Logical Instructions:** Perform bitwise operations like AND, OR, NOT, XOR, shift, and rotate operations on data.
-
-- **Control Transfer Instructions:** Alter the normal sequence of program execution through jumps, branches, calls, and returns (e.g., JMP, CALL, RET, conditional branches).
-
-- **I/O Instructions:** Handle input/output operations between CPU and peripheral devices (e.g., IN, OUT).
-
----
-
-### **d. Differentiate between RISC and CISC.**
-
-**RISC (Reduced Instruction Set Computer):**
-- Uses simple, fixed-length instructions that execute in single clock cycle
-- Large number of general-purpose registers (typically 32 or more)
-- Hardwired control unit with simple decoding logic
-- Load/store architecture where only load and store instructions access memory
-- Examples: ARM, MIPS, SPARC processors
-
-**CISC (Complex Instruction Set Computer):**
-- Uses complex, variable-length instructions that may take multiple clock cycles
-- Fewer registers with specialized purposes
-- Microprogrammed control unit with complex decoding
-- Memory can be accessed by most instructions directly
-- Examples: Intel x86, Motorola 68000 processors
-
-RISC emphasizes software complexity with simpler hardware, while CISC emphasizes hardware complexity to reduce software burden.
-
----
-
-### **e. What is CPU? Explain Various Components of a CPU.**
-
-The CPU (Central Processing Unit) is the brain of the computer that executes instructions and performs all processing operations. It interprets and executes program instructions, performs calculations, and coordinates activities of other hardware components.
-
-**Components of CPU:**
-
-- **Arithmetic Logic Unit (ALU):** Performs all arithmetic operations (addition, subtraction, multiplication, division) and logical operations (AND, OR, NOT, XOR, comparisons) on data.
-
-- **Control Unit (CU):** Directs and coordinates all computer operations by fetching instructions, decoding them, and generating control signals to execute them. It manages data flow between CPU and other components.
-
-- **Registers:** High-speed temporary storage locations within CPU that hold data, addresses, and instructions during processing. Key registers include Accumulator, Program Counter, Instruction Register, and general-purpose registers.
-
-- **Cache Memory:** Small, fast memory located close to CPU that stores frequently accessed data and instructions to reduce memory access time and improve performance.
-
-The CPU communicates with other components through system buses and operates under control of clock signals that synchronize operations.
+**Sensor Application:**
+- Gas molecules adsorb on oxide surface, changing gate voltage required for threshold
+- Used in MOSFET-based chemical sensors, pH sensors, and gas detectors
