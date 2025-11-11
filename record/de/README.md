@@ -12,5 +12,3 @@
 ---
 
 > **Digital Electronic Records won't be updated further...**
->
-> *Please ask **Annapurna** for the records*
