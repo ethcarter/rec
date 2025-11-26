@@ -100,7 +100,7 @@
 ---
 
 ### **Graphs - 06**
-> Mass storage structure using **overview algorithm**
+> Mass storage structure using **overview algorithm**  
 [![exp_btn](https://img.shields.io/badge/Experiment_27-%23000000.svg?style=for-the-badge&logo=DataStax&logoColor=FF7139)](experiments/27.md)
 >
 > Mass storage structure using **disk structure algorithm**  
