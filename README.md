@@ -1,4 +1,4 @@
-> [![syllabus](https://img.shields.io/badge/CPP-%23000000.svg?style=for-the-badge&logo=cplusplus&logoColor=FF7139)](https://drive.google.com/file/d/18ncUKOlnQdgzgW6dgC7cXpRH4ApAgd0Z/view?usp=drivesdk)
+> [![syllabus](https://img.shields.io/badge/Syllabus-%23000000.svg?style=for-the-badge&logo=bookstack&logoColor=FF7139)](https://drive.google.com/file/d/18ncUKOlnQdgzgW6dgC7cXpRH4ApAgd0Z/view?usp=drivesdk)
 
 <br>
 
