@@ -34,8 +34,4 @@
 
 <br>
 
----
-
-<img src="https://discord.com/widget?id=1434965731459727495&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></img>
-
 > **This repo has a license: [License](LICENSE)**
